@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIZUMATCH</title>
+    <!-- CSS適応 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/hero-.css">
+    <link rel="stylesheet" href="./css/event.css">
+    <link rel="stylesheet" href="./css/intro.css">
+    <link rel="stylesheet" href="./css/activity.css">
+    <link rel="stylesheet" href="./css/sns.css">
+    <link rel="stylesheet" href="./css/top.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+    <!-- ヘッダー -->
+<header class="header">
+  <div class="header__container">
+    <!-- ハンバーガー -->
+    <button class="header__toggle" id="menuToggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- サークルロゴ -->
+    <a href="#" class="header__logo">MIZUMATCH</a>
+
+    <!-- PCナビ -->
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li><a href="#">ホーム</a></li>
+        <li><a href="#">トピック</a></li>
+        <li><a href="#">私たちについて</a></li>
+        <li><a href="#">活動報告</a></li>
+        <li><a href="#">SNS</a></li>
+      </ul>
+    </nav>
+
+    <!-- 右ボタン -->
+    <a href="#" class="header__button">イベント詳細</a>
+  </div>
+
+  <!-- モバイルオーバーレイ -->
+  <div class="header__mobileOverlay" id="mobileOverlay"></div>
+
+  <!-- モバイルメニュー -->
+  <nav class="header__mobileNav" id="mobileNav">
+    <ul>
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">トピック</a></li>
+      <li><a href="#">私たちについて</a></li>
+      <li><a href="#">活動報告</a></li>
+      <li><a href="#">SNS</a></li>
+      <li><a href="#" class="header__mobileButton">イベント詳細</a></li>
+    </ul>
+  </nav>
+</header>
+
+    <!-- メイン -->
+    <main>
+
+
+      
+    <!-- ヒーロー -->
+<section class="hero-slider">
+  <div class="slides">
+    <!-- 無限ループ用コピー（最後のスライド） -->
+    <div class="slide clone" style="background-color:#FFDDA0;">
+      <div class="slide-content">
+        <h1>キャッチコピー3</h1>
+        <p>サブテキスト3</p>
+      </div>
+    </div>
+
+    <!-- 本物のスライド -->
+    <div class="slide poster-slide" style="background-color:#FFD1DC;">
+      <div class="slide-content">
+        <h1>キャッチコピー1</h1>
+        <p>サブテキスト1</p>
+      </div>
+    </div>
+    <div class="slide" style="background-color:#A8E6CF;">
+      <div class="slide-content">
+        <h1>キャッチコピー2</h1>
+        <p>サブテキスト2</p>
+      </div>
+    </div>
+    <div class="slide" style="background-color:#FFDDA0;">
+      <div class="slide-content">
+        <h1>キャッチコピー3</h1>
+        <p>サブテキスト3</p>
+      </div>
+    </div>
+
+    <!-- 無限ループ用コピー（最初のスライド） -->
+    <div class="slide clone" style="background-color:#FFD1DC;">
+      <div class="slide-content">
+        <h1>キャッチコピー1</h1>
+        <p>サブテキスト1</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PC用ボタン -->
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+
+  <!-- 横バーインジケータ（PCもスマホも共通） -->
+  <div class="slide-bar-container">
+    <div class="slide-bar"></div>
+    <div class="slide-bar"></div>
+    <div class="slide-bar"></div>
+  </div>
+</section>
+
+<!-- イベント -->
+<section class="event-section">
+
+  <h2 class="event-title">〇〇イベント</h2>
+
+  <div class="event-content">
+
+    <!-- 左側カード -->
+    <div class="event-left card">
+      <div class="card-top">
+        <p class="label"><strong>開催期間：</strong><span>〇〇〇〇〇〇〇</span></p>
+        <p class="label"><strong>開催場所：</strong><span>〇〇〇〇〇〇〇</span></p>
+        <p class="event-description">
+          イベントの詳細や文章をいれます
+        </p>
+      </div>
+      <a href="#" class="btn btn-primary">イベントページへ</a>
+    </div>
+
+    <!-- 右側カード -->
+    <div class="event-right card">
+      <div class="card-top">
+        <div class="right-inner">
+          <!-- 円グラフ -->
+          <div class="funding-chart">
+            <svg viewBox="0 0 36 36" class="circular-chart">
+              <circle class="circle-bg" cx="18" cy="18" r="15.9155" />
+              <circle class="circle" cx="18" cy="18" r="15.9155" stroke-dasharray="86,100" />
+            </svg>
+            <div class="chart-text">86%</div>
+          </div>
+
+          <!-- 支援情報 -->
+          <div class="funding-info">
+            <p class="label"><strong>目標金額：</strong><span>120万円</span></p>
+            <p class="label"><strong>支援金額：</strong><span>104万円</span></p>
+            <p class="label"><strong>支援者数：</strong><span>xx人</span></p>
+            <p class="label"><strong>期間：</strong><span>xxxx年x月xx日〜xxxx年x月xx日</span></p>
+          </div>
+        </div>
+      </div>
+      <a href="#" class="btn btn-secondary">詳細ページへ</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- イントロ -->
+<section class="intro js-observe">
+  <div class="container">
+    <div class="intro-content">
+
+      <!-- 左：画像 -->
+      <div class="intro-image js-animate">
+        <svg viewBox="0 0 120 120" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <clipPath id="imgClip">
+              <path d="
+                M20,10
+                C40,0 80,5 95,20
+                C115,40 110,70 95,90
+                C80,110 45,115 25,100
+                C5,85 0,45 20,10
+                Z
+              " />
+            </clipPath>
+          </defs>
+
+          <path
+            d="
+              M20,10
+              C40,0 80,5 95,20
+              C115,40 110,70 95,90
+              C80,110 45,115 25,100
+              C5,85 0,45 20,10
+              Z
+            "
+            fill="var(--color-accent)"
+            transform="translate(6 8)"
+            opacity="0.9"
+          />
+
+          <image
+            href="./image/mizumatch.png"
+            width="120"
+            height="120"
+            clip-path="url(#imgClip)"
+            preserveAspectRatio="xMidYMid slice"
+          />
+        </svg>
+      </div>
+
+      <!-- 右：テキスト -->
+      <div class="intro-text-area js-animate">
+        <h2 class="intro-title">
+          MIZUMATCH
+          <span class="sub">ってなに？</span>
+        </h2>
+
+        <p>
+          長野県上田市にある長野大学<br>
+          学生が集うサークル、<strong class="brand">MIZUMATCH!!</strong>
+        </p>
+
+        <p>
+          このサークルにはどんな人がいるの？<br>
+          そして、どんな活動をしているの？
+        </p>
+
+        <a href="#" class="btn">MIZUMATCHを知る</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 活動報告 -->
+<section class="ar-section">
+  <h2 class="ar-title">活動報告</h2>
+
+  <div class="ar-slider-area">
+    <!-- 外側コンテナ -->
+    <div class="ar-slider-container">
+      <!-- スライダー -->
+      <div class="ar-slider">
+        <div class="ar-track">
+          <a href="detail1.html" class="ar-card">
+            <div class="ar-image"><img src="./image/sample1.jpg" alt=""></div>
+            <p class="ar-date">2025.04.12</p>
+            <div class="ar-body">
+              <h3>新歓イベントを開催</h3>
+              <p>多くの新入生が参加し、交流を深めました。</p>
+            </div>
+          </a>
+
+          <a href="detail2.html" class="ar-card">
+            <div class="ar-image ar-no-image">No Image</div>
+            <p class="ar-date">2025.04.05</p>
+            <div class="ar-body">
+              <h3>定例ミーティング</h3>
+              <p>今後の活動について話し合いました。</p>
+            </div>
+          </a>
+
+          <a href="detail3.html" class="ar-card">
+            <div class="ar-image"><img src="./image/sample2.jpg" alt=""></div>
+            <p class="ar-date">2025.03.28</p>
+            <div class="ar-body">
+              <h3>イベント準備</h3>
+              <p>本番に向けて準備を進めています。</p>
+            </div>
+          </a>
+
+          <a href="detail4.html" class="ar-card">
+            <div class="ar-image ar-no-image">No Image</div>
+            <p class="ar-date">2025.03.10</p>
+            <div class="ar-body">
+              <h3>交流会</h3>
+              <p>学年を超えた交流が生まれました。</p>
+            </div>
+          </a>
+
+          <a href="detail5.html" class="ar-card">
+            <div class="ar-image"><img src="./image/sample3.jpg" alt=""></div>
+            <p class="ar-date">2025.02.20</p>
+            <div class="ar-body">
+              <h3>ワークショップ開催</h3>
+              <p>メンバーがスキルを共有しました。</p>
+            </div>
+          </a>
+
+          <a href="detail6.html" class="ar-card">
+            <div class="ar-image ar-no-image">No Image</div>
+            <p class="ar-date">2025.01.15</p>
+            <div class="ar-body">
+              <h3>新年会</h3>
+              <p>楽しい交流の時間を過ごしました。</p>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 左右ボタン -->
+      <button class="ar-btn ar-prev">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M15 18l-6-6 6-6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <button class="ar-btn ar-next">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path d="M9 6l6 6-6 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- プログレスバー -->
+  <div class="ar-progress">
+    <div class="ar-progress-bar">
+      <div class="ar-progress-indicator"></div>
+    </div>
+  </div>
+</section>
+
+<!-- SNS -->
+<section class="sns-section">
+  <div class="container">
+    <h2 class="section-title">SNS</h2>
+    <div class="sns-cards">
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/mizumatch_wkwk/" target="_blank" class="sns-card instagram">
+        <div class="card-left">
+          <div class="icon">IG</div>
+        </div>
+        <div class="card-right">
+          <h3 class="card-title">Instagram</h3>
+          <!-- PC版の長め文章 -->
+          <p class="card-desc pc-text">
+            日々の活動や最新情報を発信しています
+          </p>
+          <!-- スマホ用短文 -->
+          <p class="card-desc sp-text">
+            日々の活動や最新情報を発信しています
+          </p>
+          <p class="card-info">@mizumatch_wkwk</p>
+        </div>
+      </a>
+
+      <!-- Gmail -->
+      <a href="mailto:example@gmail.com" class="sns-card gmail">
+        <div class="card-left">
+          <div class="icon">G</div>
+        </div>
+        <div class="card-right">
+          <h3 class="card-title">Gmail</h3>
+          <p class="card-desc pc-text">
+            ご質問・お問い合わせはこちらから。   
+            返信は通常24時間以内を目安に対応しております。
+          </p>
+          <p class="card-desc sp-text">
+            お問い合わせはこちらから
+          </p>
+          <p class="card-info">example@gmail.com</p>
+        </div>
+      </a>
+
+      <!-- 長野大学 -->
+      <a href="https://www.nagano.ac.jp/" target="_blank" class="sns-card nagano">
+        <div class="card-left">
+          <div class="icon">NU</div>
+        </div>
+        <div class="card-right">
+          <h3 class="card-title">長野大学</h3>
+          <p class="card-desc pc-text">
+            大学公式ウェブサイトはこちら。<br>
+            興味のある方はぜひ！！
+          </p>
+          <p class="card-desc sp-text">
+            公式ウェブサイトはこちら
+          </p>
+          <p class="card-info">長野県上田市下之郷658‑1</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- トップへ戻る -->
+<section class="scroll-top-section">
+  <div class="container">
+    <a href="#top" class="scroll-top-btn">
+      <span class="arrow">↑</span>
+      <span class="text">トップへ戻る</span>
+    </a>
+  </div>
+</section>
+
+
+
+
+
+    </main>
+
+    <!-- フッター -->
+<footer class="site-footer">
+  <div class="footer-top container">
+    <!-- 左：ロゴ・サイト名 -->
+    <div class="footer-logo">
+      <h3>MyWebsite</h3>
+      <p>あなたの情報発信サイト</p>
+    </div>
+
+    <!-- 中央：ナビリンク -->
+    <div class="footer-nav">
+      <h4>サイトメニュー</h4>
+      <a href="#top">トップ</a>
+      <a href="#about">About</a>
+      <a href="#services">サービス</a>
+      <a href="#contact">お問い合わせ</a>
+    </div>
+
+    <!-- 右：SNS・連絡先 -->
+    <div class="footer-contact">
+      <h4>SNS / 連絡先</h4>
+      <div class="footer-sns">
+        <a href="https://www.instagram.com/mizumatch_wkwk/" target="_blank" class="sns-btn instagram">IG</a>
+        <a href="mailto:example@gmail.com" class="sns-btn gmail">G</a>
+        <a href="https://www.nagano.ac.jp/" target="_blank" class="sns-btn nagano">NU</a>
+      </div>
+      <p>Email: example@gmail.com</p>
+      <p>住所: 長野県上田市下之郷658‑1</p>
+    </div>
+  </div>
+
+  <!-- 拡張用ブロック（将来的に表示） -->
+  <div class="footer-extensions container">
+    <!-- ニュースレター登録 -->
+    <div class="footer-newsletter future-block" style="display:none;">
+      <h4>ニュースレター登録</h4>
+      <form>
+        <input type="email" placeholder="メールアドレスを入力" required>
+        <button type="submit">登録</button>
+      </form>
+    </div>
+
+    <!-- アクセスマップ -->
+    <div class="footer-map future-block" style="display:none;">
+      <h4>アクセスマップ</h4>
+      <p>将来的に地図やアクセス情報を表示</p>
+    </div>
+
+    <!-- FAQリンク -->
+    <div class="footer-faq future-block" style="display:none;">
+      <h4>FAQ</h4>
+      <a href="#faq">よくある質問</a>
+    </div>
+
+    <!-- 著作権表示 -->
+    <div class="footer-bottom future-block" style="display:none;">
+      <p>&copy; 2026 MyWebsite. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+<script src="./js/header.js"></script>
+<script src="./js/hero.js"></script>
+<script src="./js/event.js"></script>
+<script src="./js/intro.js"></script>
+<script src="./js/activity.js"></script>
+<script src="./js/sns.js"></script>
+<script src="./js/footer.js"></script>
+
+</body>
+</html>
