@@ -1,0 +1,139 @@
+:root {
+  --primary-color: #00bfff;
+  --bg-color: #ffffff;
+  --card-bg: #fdfdfd;
+  --card-hover: #e6f7ff;
+  --card-border: #00bfff;
+  --text-color: #333;
+  --info-color: #555;
+  --card-radius: 20px;
+  --icon-size: 80px;
+}
+
+/* セクション全体 */
+.sns-section {
+  background-color: var(--bg-color);
+  padding: 60px 20px;
+}
+
+.section-title {
+  font-size: 2.7rem;
+  font-weight: bold;
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+/* カードコンテナ */
+.sns-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1200px; /* PC幅最大 */
+  margin: 0 auto;
+}
+
+/* カード全体 */
+.sns-card {
+  display: flex;
+  width: 100%;
+  background-color: var(--card-bg);
+  border: 2px solid var(--card-border);
+  border-radius: var(--card-radius);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  overflow: hidden;
+}
+
+.sns-card:hover {
+  transform: translateY(-6px) scale(1.01);
+  background-color: var(--card-hover);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+/* 左側アイコン */
+.card-left {
+  flex: 0 0 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+}
+
+.sns-card .icon {
+  width: var(--icon-size);
+  height: var(--icon-size);
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* 右側テキスト */
+.card-right {
+  flex: 1 1 auto;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card-title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.card-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  color: var(--info-color);
+}
+
+.card-info {
+  font-size: 0.95rem;
+  color: #777;
+}
+
+/* アイコン色 */
+.sns-card.instagram .icon {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.sns-card.gmail .icon {
+  background-color: #dd4b39;
+}
+
+.sns-card.nagano .icon {
+  background-color: var(--primary-color);
+}
+
+/* PCとスマホで文章切替 */
+.pc-text { display: block; }
+.sp-text { display: none; }
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .sns-card {
+    flex-direction: row; /* 横長維持 */
+    width: 100%;
+  }
+  .card-left {
+    flex: 0 0 80px;
+    padding: 15px;
+  }
+  .card-right {
+    padding: 10px 15px;
+  }
+  .card-title { font-size: 1.5rem; }
+  .card-desc { font-size: 0.95rem; line-height: 1.5; }
+  .pc-text { display: none; }
+  .sp-text { display: block; }
+}

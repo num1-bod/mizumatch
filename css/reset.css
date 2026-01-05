@@ -1,0 +1,10 @@
+*{
+    /* デバック用の線 */
+    /* outline: 1px solid rgba(255, 0, 0, 0.5);  */
+    
+    /* 背景画像 */
+    /* background-image: url(../image/main-image.png); */
+    /* スペース削除 */
+    margin: 0;
+    padding: 0;
+}
