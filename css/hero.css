@@ -1,0 +1,69 @@
+/* =========================
+   NEWS セクション
+========================= */
+
+.news-section {
+    padding: 10px 0;
+}
+
+/* 見出し */
+.news {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+/* =========================
+   HERO（共通）
+========================= */
+
+.hero {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 12px;
+
+    /* サイズ確認用の枠線 */
+    border: 2px dashed #333;
+
+    /* 背景画像（確認用） */
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    /* 中央配置 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 中央のサイズ表示 */
+.hero-size {
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+}
+
+/* =========================
+   PC 表示
+========================= */
+
+@media screen and (min-width: 768px) {
+    .hero {
+        max-width: 1500px;
+        aspect-ratio: 16 / 9;
+    }
+}
+
+/* =========================
+   スマホ 表示
+========================= */
+
+@media screen and (max-width: 767px) {
+    .hero {
+        aspect-ratio: 4 / 3;
+    }
+}
