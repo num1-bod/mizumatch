@@ -1,0 +1,235 @@
+/* =========================
+   変数（よく変更する部分）
+========================= */
+:root {
+    /* メインカラー（タイトル・下線など） */
+    --main-color: #1F5199;
+
+    /* サブタイトル文字サイズ */
+    --subtitle-font-size: 14px;
+
+    /* タイトル文字サイズ */
+    --title-font-size: 36px;
+
+    /* タイトル下の点線幅（PC固定幅） */
+    --title-line-width: 1400px;
+
+    /* タイトル下の点線太さ */
+    --title-line-thickness: 4px;
+
+    /* アイコンサイズ */
+    --icon-size: 48px;
+
+    /* タイトルと点線の間隔 */
+    --title-line-margin-top: 12px;
+
+    /* タイトルとアイコン間のgap */
+    --title-gap: 12px;
+
+    /* ナビ関連 */
+    --nav-link-color: #000;
+    --nav-hover-color: var(--main-color);
+    --nav-font-size: 14px;
+    --nav-hover-thickness: 2px;
+    --nav-max-width-pc: 800px;
+    --nav-gap-mobile: 24px;
+}
+
+/* =========================
+   ヘッダー全体
+========================= */
+.site-header {
+    text-align: center;
+    padding: 24px 16px;
+}
+
+/* サブタイトル */
+.site-subtitle {
+    margin: 0;
+    font-size: var(--subtitle-font-size);
+    letter-spacing: 0.05em;
+}
+
+/* タイトルとアイコンの横並び */
+.title-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--title-gap);
+    margin: 12px 0;
+}
+
+/* 丸いアイコン */
+.site-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* タイトル */
+.site-title {
+    margin: 0;
+    font-size: var(--title-font-size);
+    color: var(--main-color);
+    letter-spacing: 0.1em;
+}
+
+/* タイトル下の点線 */
+.title-line {
+    width: var(--title-line-width);
+    max-width: 100%;
+    border-bottom: var(--title-line-thickness) dotted var(--main-color);
+    margin: var(--title-line-margin-top) auto 0;
+}
+
+/* =========================
+   ナビ全体
+========================= */
+.nav {
+    overflow-x: auto;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.nav-list li {
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.nav-list a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-weight: 600;
+    font-size: var(--nav-font-size);
+    padding: 8px 0;
+}
+
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: var(--nav-hover-thickness);
+    background-color: var(--nav-hover-color);
+    transition: width 0.3s ease;
+}
+
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+/* 区切り | */
+.nav-list li::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+.nav-list li:last-child::after {
+    content: "";
+}
+
+/* =========================
+   PC表示（1024px以上）
+========================= */
+@media screen and (min-width: 1024px) {
+    .nav-list {
+        max-width: var(--nav-max-width-pc);
+        justify-content: space-between;
+    }
+
+    .nav-list li {
+        flex: 1;
+    }
+
+    .nav-list li::after {
+        right: 0;
+    }
+}
+
+/* =========================
+   スマホ表示（768px以下：ヘッダー調整）
+========================= */
+@media screen and (max-width: 768px) {
+    .site-header {
+        padding: 16px 12px;
+    }
+
+    .site-subtitle {
+        font-size: 12px;
+    }
+
+    .title-area {
+        gap: 8px;
+    }
+
+    .site-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .title-line {
+        width: 90%;
+        margin-top: 8px;
+        border-bottom-width: 3px;
+    }
+}
+
+/* =========================
+   スマホ表示（1023px以下：ナビ4つ横並び＋区切りあり）
+========================= */
+@media screen and (max-width: 1023px) {
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0 auto;
+        gap: 0;
+        width: 100%;
+    }
+
+    .nav-list li {
+        flex: 1;
+        text-align: center;
+        position: relative; /* 区切り用 */
+    }
+
+    /* 区切り「|」を表示 */
+    .nav-list li::after {
+        content: "|";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #999;
+    }
+
+    /* 最後の項目の区切りは非表示 */
+    .nav-list li:last-child::after {
+        content: "";
+    }
+
+    /* 画面幅に応じて文字サイズ自動縮小 */
+    .nav-list a {
+        font-size: clamp(10px, 3vw, 14px);
+        padding: 6px 2px;
+    }
+}
