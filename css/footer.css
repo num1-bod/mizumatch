@@ -1,0 +1,170 @@
+/* =========================
+   フッター変数
+========================= */
+:root {
+    --footer-text-color: #333;
+    --footer-subtle-color: #777;
+    --footer-link-hover-color: #1F5199;
+    --footer-font-size: 14px;
+    --footer-padding: 40px 16px;
+    --footer-copy-size: 12px;
+    --footer-border-color: #ddd;
+    --footer-max-width: 1400px;
+}
+
+/* =========================
+   フッター全体
+========================= */
+.site-footer {
+    padding: var(--footer-padding);
+    border-top: 2px solid var(--footer-border-color);
+}
+
+/* =========================
+   3分割コンテナ
+========================= */
+.footer-container {
+    max-width: var(--footer-max-width);
+    margin: 0 auto;
+    display: flex;
+    gap: 32px;
+}
+
+/* 共通 */
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+}
+
+/* =========================
+   ナビ
+========================= */
+.footer-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-nav-list a {
+    text-decoration: none;
+    font-size: var(--footer-font-size);
+    font-weight: 600;
+    color: var(--footer-text-color);
+}
+
+.footer-nav-list a:hover {
+    color: var(--footer-link-hover-color);
+}
+
+/* =========================
+   イベント
+========================= */
+.footer-center-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.footer-event-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-event-list a {
+    text-decoration: none;
+    font-size: var(--footer-font-size);
+    color: var(--footer-subtle-color);
+}
+
+.footer-event-list a:hover {
+    color: var(--footer-link-hover-color);
+}
+
+/* =========================
+   SNS
+========================= */
+.footer-sns {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sns-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--footer-text-color);
+}
+
+.sns-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1.5px solid #000;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.sns-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sns-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* =========================
+   コピーライト
+========================= */
+.footer-copy-container {
+    margin-top: 32px;
+    text-align: center;
+}
+
+.footer-copy {
+    font-size: var(--footer-copy-size);
+    color: #999;
+    margin: 0;
+}
+
+/* =========================
+   スマホ
+========================= */
+@media (max-width: 767px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+
+    .footer-center {
+        grid-column: 1 / span 2;
+    }
+
+    .footer-nav-list a,
+    .footer-event-list a {
+        font-size: 15px;
+    }
+
+    .sns-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .sns-name {
+        font-size: 13px;
+    }
+}
