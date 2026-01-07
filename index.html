@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIZUMATCH</title>
+<!-- =========================
+        CSS部
+=========================== -->
+    <link rel="stylesheet" href="./css/reset.css"> 
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/hero.css">
+    <link rel="stylesheet" href="./css/circle.css">
+    <link rel="stylesheet" href="./css/activity-report.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/sns.css">
+</head>
+<body>
+<!-- =========================
+          ヘッター部
+=========================== -->
+<header class="site-header">
+    <!-- サブタイトル（小さい文字） -->
+    <p class="site-subtitle">長野大学サークル　ミズマチ</p>
+
+    <!-- タイトルとアイコン -->
+    <div class="title-area">
+        <!-- 丸いアイコン画像 -->
+        <img src="./image/MIZUMATCH.jpg" alt="MIZUMATCHアイコン" class="site-icon">
+        <!-- メインタイトル -->
+        <h1 class="site-title">MIZUMATCH</h1>
+    </div>
+
+    <!-- タイトル下の点線 -->
+    <div class="title-line"></div>
+
+    <!-- ナビゲーション -->
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#">ホーム</a></li>
+            <li><a href="#circle">私たちについて</a></li>
+            <li><a href="#activity">活動報告</a></li>
+            <li><a href="#sns-section">SNS</a></li>
+        </ul>
+    </nav>
+</header>
+<!-- =========================
+          メイン部
+=========================== -->
+<main>
+    <!-- ヒーロー -->
+    <section class="news-section">
+        <h2 class="news">NEWS!!</h2>
+
+        <div class="hero" id="hero">
+            <span class="hero-size" id="heroSize"></span>
+        </div>
+    </section>
+    <!-- サークル紹介 -->
+    <section id="circle" class="circle">
+        <div class="circle-box">
+
+            <!-- 左側：サークル画像 -->
+            <div class="circle-box-left">
+                <div class="circle-image-box">
+                    <!-- ★ 画像を差し替える場合は src を変更 -->
+                    <img src="./image/mizumatch.png" alt="サークル集合写真">
+                </div>
+            </div>
+
+            <!-- 右側：紹介テキスト -->
+            <div class="circle-box-right">
+                <div class="introduction-text-box">
+
+                    <!-- ★ タイトル文言を変更 -->
+                    <h2 class="introduction-title">
+                        MIZUMATCHってなに？
+                    </h2>
+
+                    <!-- ★ 紹介文を変更 -->
+                    <p class="introduction-text">
+                        長野大学の学生が集うサークル、MIZUMATCH。<br>
+                        このサークルにはどんな人がいるの？<br>
+                        何をしているの？
+                    </p>
+
+                    <!-- ★ ボタンの文字を変更 -->
+                    <button class="introduction-button">
+                        MIZUMATCHについて
+                    </button>
+
+                </div>
+            </div>
+
+        </div>
+    </section>      
+    <!-- 活動報告 -->
+    <section id="activity" class="activity">
+    <div class="activity-inner">
+
+        <h2 class="section-title">活動報告</h2>
+
+        <div class="activity-wrapper">
+        <button class="slide-btn prev" aria-label="前へ">‹</button>
+
+        <div class="activity-slider" id="activitySlider">
+
+            <article class="activity-card">
+            <a href="activity-detail.html?id=1" class="card-link">
+                <div class="card-image">
+                <img src="https://placehold.jp/600x600.png" alt="">
+                </div>
+
+                <div class="card-body">
+                <h3 class="card-title">活動タイトル 1</h3>
+                <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                <time class="card-date">2026.01.05</time>
+                </div>
+            </a>
+            </article>
+
+            <article class="activity-card">
+            <a href="activity-detail.html?id=2" class="card-link">
+                <div class="card-image">
+                <img src="https://placehold.jp/600x600.png" alt="">
+                </div>
+
+                <div class="card-body">
+                <h3 class="card-title">活動タイトル 2</h3>
+                <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                <time class="card-date">2026.01.04</time>
+                </div>
+            </a>
+            </article>
+
+            <article class="activity-card">
+            <a href="activity-detail.html?id=3" class="card-link">
+                <div class="card-image">
+                <img src="https://placehold.jp/600x600.png" alt="">
+                </div>
+
+                <div class="card-body">
+                <h3 class="card-title">活動タイトル 3</h3>
+                <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                <time class="card-date">2026.01.03</time>
+                </div>
+            </a>
+            </article>
+
+            <article class="activity-card">
+            <a href="activity-detail.html?id=3" class="card-link">
+                <div class="card-image">
+                <img src="https://placehold.jp/600x600.png" alt="">
+                </div>
+
+                <div class="card-body">
+                <h3 class="card-title">活動タイトル 4</h3>
+                <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                <time class="card-date">2026.01.03</time>
+                </div>
+            </a>
+            </article>
+
+            <article class="activity-card">
+            <a href="activity-detail.html?id=3" class="card-link">
+                <div class="card-image">
+                <img src="https://placehold.jp/600x600.png" alt="">
+                </div>
+
+                <div class="card-body">
+                <h3 class="card-title">活動タイトル 5</h3>
+                <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                <time class="card-date">2026.01.03</time>
+                </div>
+            </a>
+            </article>
+
+        </div>
+
+        <button class="slide-btn next" aria-label="次へ">›</button>
+        </div>
+
+    </div>
+    </section>
+    <!-- sns -->
+    <section id="sns-section" class="sns-section">
+        <div class="sns-inner">
+            <h2 class="sns-title">公式SNS</h2>
+
+            <div class="sns-list">
+                <!-- Instagram -->
+                <div class="sns-card">
+                    <div class="sns-icon">
+                        <img src="./image/Instagram.png" alt="Instagram">
+                    </div>
+
+                    <div class="sns-content">
+                        <h3 class="sns-card-title">Instagram</h3>
+                        <p class="sns-text">日常の活動を投稿</p>
+                        <a href="https://www.instagram.com/mizumatch_wkwk"
+                        target="_blank"
+                        class="sns-link">
+                            mizumatch_wkwk
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Facebook -->
+                <div class="sns-card">
+                    <div class="sns-icon">
+                        <img src="./image/Facebook.png" alt="Facebook">
+                    </div>
+
+                    <div class="sns-content">
+                        <h3 class="sns-card-title">Facebook</h3>
+                        <p class="sns-text">イベント情報やお知らせを掲載</p>
+                        <a href="https://www.facebook.com/mizumatch"
+                        target="_blank"
+                        class="sns-link">
+                            ミズ マチ子 (@mizumatch)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Gmail -->
+                <div class="sns-card">
+                    <div class="sns-icon">
+                        <img src="./image/Gmail.png" alt="Gmail">
+                    </div>
+
+                    <div class="sns-content">
+                        <h3 class="sns-card-title">Gmail</h3>
+                        <p class="sns-text">ご質問・参加希望はこちらへ</p>
+                        <a href="mailto:xxxxxxxx@gmail.com"
+                        class="sns-link">
+                            xxxxxxxx@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<!-- =========================
+          フッター部
+=========================== -->
+<footer class="site-footer">
+    <div class="footer-container">
+
+        <!-- 左：ナビ -->
+        <div class="footer-left">
+            <nav class="footer-nav">
+                <ul class="footer-nav-list">
+                    <li><a href="#">ホーム</a></li>
+                    <li><a href="#">私たちについて</a></li>
+                    <li><a href="#">イベント情報</a></li>
+                    <li><a href="#">ブログ</a></li>
+                    <li><a href="#">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- 中央：イベント -->
+        <div class="footer-center">
+            <h3 class="footer-center-title">イベント情報</h3>
+            <ul class="footer-event-list">
+                <li><a href="#">イベント詳細</a></li>
+                <li><a href="#">申込方法</a></li>
+                <li><a href="#">過去のイベント</a></li>
+            </ul>
+        </div>
+
+        <!-- 右：SNS -->
+        <div class="footer-right">
+            <div class="footer-sns">
+                <a href="#" class="sns-link" aria-label="Instagram">
+                    <span class="sns-icon">
+                        <img src="./image/Instagram.png" alt="">
+                    </span>
+                    <span class="sns-name">Instagram</span>
+                </a>
+
+                <a href="#" class="sns-link" aria-label="Facebook">
+                    <span class="sns-icon">
+                        <img src="./image/Facebook.png" alt="">
+                    </span>
+                    <span class="sns-name">Facebook</span>
+                </a>
+
+                <a href="#" class="sns-link" aria-label="Gmail">
+                    <span class="sns-icon">
+                        <img src="./image/Gmail.png" alt="">
+                    </span>
+                    <span class="sns-name">Gmail</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer-copy-container">
+        <p class="footer-copy">© 2026 MIZUMATCH</p>
+    </div>
+</footer>
+
+<!-- =========================
+          JS部
+=========================== -->
+<script src="./js/hero.js"></script>
+<script src="./js/activitiy-report.js"></script>
+</body>
+</html>
