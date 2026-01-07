@@ -1,0 +1,120 @@
+/* =========================
+   ナビゲーション用変数
+========================= */
+:root {
+    /* ナビリンクの文字色 */
+    --nav-link-color: #000;
+
+    /* ナビホバー下線色 */
+    --nav-hover-color: var(--main-color);
+
+    /* ナビリンク文字サイズ */
+    --nav-font-size: 14px;
+
+    /* ナビホバー下線高さ */
+    --nav-hover-thickness: 2px;
+
+    /* ナビ項目間の間隔（スマホ） */
+    --nav-gap-mobile: 24px;
+
+    /* PCナビ幅 */
+    --nav-max-width-pc: 800px;
+}
+
+/* =========================
+   ナビ全体
+========================= */
+.nav {
+    overflow-x: auto; /* スマホ横スクロール対応 */
+}
+
+/* ナビリスト */
+.nav-list {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    white-space: nowrap; /* 改行防止 */
+}
+
+/* 各項目 */
+.nav-list li {
+    position: relative;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* リンク */
+.nav-list a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: var(--nav-link-color);
+    font-weight: 600;
+    font-size: var(--nav-font-size);
+    padding: 8px 0;
+}
+
+/* ホバー下線 */
+.nav-list a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: var(--nav-hover-thickness);
+    background-color: var(--nav-hover-color);
+    transition: width 0.3s ease;
+}
+
+/* ホバー時に下線を表示 */
+.nav-list a:hover::after {
+    width: 100%;
+}
+
+/* | 区切り */
+.nav-list li::after {
+    content: "|";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+}
+
+/* 最後の | を消す */
+.nav-list li:last-child::after {
+    content: "";
+}
+
+/* =========================
+   PC表示（幅800px・均等配置）
+========================= */
+@media screen and (min-width: 1024px) {
+    .nav-list {
+        max-width: var(--nav-max-width-pc); /* PC幅 */
+        justify-content: space-between;
+    }
+
+    .nav-list li {
+        flex: 1; /* 均等配置 */
+    }
+
+    .nav-list li::after {
+        right: 0;
+    }
+}
+
+/* =========================
+   スマホ表示（1行固定）
+========================= */
+@media screen and (max-width: 1023px) {
+    .nav-list {
+        gap: var(--nav-gap-mobile);
+        justify-content: center;
+    }
+
+    .nav-list li::after {
+        right: -12px;
+    }
+}
