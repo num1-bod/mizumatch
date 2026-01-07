@@ -1,6 +1,0 @@
-.slide{
-    background-image: url(./../image/main-image.png);
-    background-size: cover;                             /* 要素を覆うように拡大縮小 */
-    background-position: center;                        /* 真ん中に配置 */
-    background-repeat: no-repeat;                       /* 繰り返さない */
-}
