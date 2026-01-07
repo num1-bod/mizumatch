@@ -1,0 +1,78 @@
+/* =========================
+   変数（よく変更する部分はここで調整）
+========================= */
+:root {
+    /* メインカラー（タイトル・下線など） */
+    --main-color: #1F5199;
+
+    /* サブタイトル文字サイズ */
+    --subtitle-font-size: 14px;
+
+    /* タイトル文字サイズ */
+    --title-font-size: 36px;
+
+    /* タイトル下の点線幅（PC固定幅） */
+    --title-line-width: 1400px;
+
+    /* タイトル下の点線太さ */
+    --title-line-thickness: 4px;
+
+    /* アイコンサイズ */
+    --icon-size: 48px;
+
+    /* タイトルと点線の間隔 */
+    --title-line-margin-top: 12px;
+
+    /* タイトルとアイコン間のgap */
+    --title-gap: 12px;
+}
+
+/* =========================
+   ヘッダー全体
+========================= */
+.site-header {
+    text-align: center;
+    padding: 24px 16px;
+}
+
+/* サブタイトル */
+.site-subtitle {
+    margin: 0;
+    font-size: var(--subtitle-font-size);
+    letter-spacing: 0.05em;
+}
+
+/* タイトルとアイコンの横並び */
+.title-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--title-gap);
+    margin: 12px 0;
+}
+
+/* 丸いアイコン */
+.site-icon {
+    width: var(--icon-size);
+    height: var(--icon-size);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* タイトル */
+.site-title {
+    margin: 0;
+    font-size: var(--title-font-size);
+    color: var(--main-color);
+    letter-spacing: 0.1em;
+}
+
+/* =========================
+   タイトル下の点線
+========================= */
+.title-line {
+    width: var(--title-line-width);   /* PCでの固定幅 */
+    max-width: 100%;                  /* 小さい画面で縮小 */
+    border-bottom: var(--title-line-thickness) dotted var(--main-color);
+    margin: var(--title-line-margin-top) auto 0; /* タイトルとの間隔 */
+}
