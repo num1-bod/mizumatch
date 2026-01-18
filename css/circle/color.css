@@ -1,0 +1,41 @@
+:root {
+    --main-color: #1F5199;
+    --bg-color: #E5ECF2; /* 初期背景色 */
+}
+
+/* =========================
+   背景色アニメーション
+========================= */
+body {
+    background-color: var(--bg-color);
+    transition: background-color 0.4s ease;
+}
+
+/* ヘッダー・スマホメニューも追従 */
+.site-header,
+.nav-sp {
+    background-color: var(--bg-color);
+    transition: background-color 0.4s ease;
+}
+
+/* =========================
+   共通ボタン（背景色変更用）
+========================= */
+.color-button {
+    padding: 8px 16px;
+    border-radius: 999px;
+    border: 2px solid var(--main-color);
+    background: #fff;
+    color: var(--main-color);
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.color-button:hover {
+    background: var(--main-color);
+    color: #fff;
+}
+
+/* 表示制御 */
+.pc-only { display: inline-block; }
+.sp-only { display: none; }
