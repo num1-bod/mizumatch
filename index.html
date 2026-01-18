@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIZUMATCH</title>
+    <!-- ==========================
+                CSS部
+    =========================== -->
+    <!-- ホーム -->
+    <link rel="stylesheet" href="./css/home/home/reset.css"> 
+    <link rel="stylesheet" href="./css/home/header.css">
+    <link rel="stylesheet" href="./css/home/color.css">
+    <link rel="stylesheet" href="./css/home/nav.css">
+    <link rel="stylesheet" href="./css/home/hero.css">
+    <link rel="stylesheet" href="./css/home/event.css">
+    <link rel="stylesheet" href="./css/home/circle.css">
+    <link rel="stylesheet" href="./css/home/activity-report.css">
+    <link rel="stylesheet" href="./css/home/sns.css">
+    <link rel="stylesheet" href="./css/home/footer.css">
+    <!-- サークル -->
+    <link rel="stylesheet" href="./css/circle/reset.css"> 
+    <link rel="stylesheet" href="./css/circle/header.css">
+    <link rel="stylesheet" href="./css/circle/color.css">
+    <link rel="stylesheet" href="./css/circle/circle.css">
+    <link rel="stylesheet" href="./css/circle/footer.css">
+    <link rel="stylesheet" href="./css/circle/section-1.css">
+    <link rel="stylesheet" href="./css/circle/section-2.css">
+    <link rel="stylesheet" href="./css/circle/section-3.css">
+    <!-- 全体 -->
+    <link rel="stylesheet" href="./css/all/button-top.css">
+    <link rel="stylesheet" href="./css/all/event-badge.css">
+</head>
+<body>
+<!-- ==========================
+        ヘッダー部
+========================== -->
+<header class="site-header">
+    <div class="header-inner">
+
+        <!-- ハンバーガーメニュー（左端） -->
+        <button class="hamburger" id="hamburger" aria-label="メニュー">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- サークル名（中央） -->
+        <div class="header-left">
+            <img src="./image/MIZUMATCH.jpg" alt="MIZUMATCH" class="site-icon">
+            <span class="site-title">MIZUMATCH</span>
+        </div>
+
+        <!-- PCナビゲーション -->
+        <nav class="nav-pc">
+            <ul>
+                <li><a href="#page-home" class="nav-link">ホーム</a></li>
+                <li><a href="#page-circle" class="nav-link">私たちについて</a></li>
+                <li><a href="#page-event" class="nav-link">イベント</a></li>
+                <li><a href="#page-activity" class="nav-link">活動報告</a></li>
+                <li><a href="#page-sns" class="nav-link">SNS</a></li>
+                <li><a href="#page-inquiry" class="nav-link">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+        <!-- 背景色変更ボタン（PC） -->
+        <button class="color-button pc-only" id="colorBtn">背景色</button>
+
+        <!-- 背景色変更ボタン（SPヘッダー） -->
+        <button class="color-button sp-only color-sp-right" id="colorBtnSpHeader">色</button>
+
+    </div>
+</header>
+<!-- ==========================
+        スマホスライドメニュー
+========================== -->
+<nav class="nav-sp" id="navSp">
+    <ul class="nav-sp-list">
+        <li><a href="#page-home" class="nav-link">ホーム</a></li>
+        <li><a href="#page-circle" class="nav-link">私たちについて</a></li>
+        <li><a href="#page-event" class="nav-link">イベント</a></li>
+        <li><a href="#page-activity" class="nav-link">活動報告</a></li>
+        <li><a href="#page-sns" class="nav-link">SNS</a></li>
+        <li><a href="#page-inquiry" class="nav-link">お問い合わせ</a></li>
+    </ul>
+
+    <div class="nav-sp-footer">
+        <button class="color-button" id="colorBtnSpMenu">背景色変更</button>
+    </div>
+</nav>
+<!-- メニュー外タップ用オーバーレイ -->
+<div class="overlay" id="overlay"></div>
+<!-- カラーピッカー -->
+<input type="color" id="colorPicker" hidden>
+<!-- ==========================
+        スマホ下ナビ
+========================== -->
+<section class="sp-nav-section">
+    <nav class="sp-nav">
+        <ul class="sp-nav-list">
+            <li class="sp-nav-item">
+                <a href="#page-home" class="nav-link sp-nav-link">ホーム</a>
+            </li>
+            <li class="sp-nav-item">
+                <a href="#page-circle" class="nav-link sp-nav-link">サークル</a>
+            </li>
+            <li class="sp-nav-item">
+                <a href="#page-event" class="nav-link sp-nav-link">イベント</a>
+            </li>
+            <li class="sp-nav-item">
+                <a href="#page-volunteer" class="nav-link sp-nav-link">ボランティア</a>
+            </li>
+        </ul>
+    </nav>
+</section>
+    <!-- ==========================
+            メイン部
+    =========================== -->
+    <main class="main-content">
+        <!-- ==========================
+                    ホーム
+        =========================== -->
+        <section id="page-home" class="main-section is-active">
+            <!-- ヒーロー -->
+            <section class="news-section">
+                <h2 class="news">NEWS!!</h2>
+
+                <div class="hero">
+                    <img src="./image/fes.png" alt="NEWS画像">
+                </div>
+            </section>
+            <!-- イベント -->
+            <section class="event-section">
+            <!-- タイトル -->
+            <h2 class="event-title">MATCHフェス2026</h2>
+
+            <!-- タイトル下ブロック -->
+            <div class="event-content-wrapper">
+                <!-- 左：イベント情報 -->
+                <div class="event-text">
+                <p class="event-info">開催日：4月26日（日）</p>
+                <p class="event-info">開催時間：10時～19時</p> <!-- 追加 -->
+                <p class="event-info">開催場所：上田城跡公園 やぐら下芝生広場</p>
+                </div>
+
+                <!-- 右：ボタン -->
+                <div class="event-buttons">
+                <a href="#" class="btn btn-primary">イベントページ</a>
+                <a href="#" class="btn btn-secondary outlined">クラウドファンディング</a>
+                </div>
+            </div>
+            </section>
+            <!-- サークル紹介 -->
+            <section id="circle" class="circle">
+                <div class="circle-box">
+
+                    <!-- 左側：サークル画像 -->
+                    <div class="circle-box-left">
+                        <div class="circle-image-box">
+                            <!-- ★ 画像を差し替える場合は src を変更 -->
+                            <img src="./image/mizumatch.png" alt="サークル集合写真">
+                        </div>
+                    </div>
+
+                    <!-- 右側：紹介テキスト -->
+                    <div class="circle-box-right">
+                        <div class="introduction-text-box">
+
+                            <!-- ★ タイトル文言を変更 -->
+                            <h2 class="introduction-title">
+                                MIZUMATCHってなに？
+                            </h2>
+
+                            <!-- ★ 紹介文を変更 -->
+                            <p class="introduction-text">
+                                長野大学の学生が集うサークル、MIZUMATCH。<br>
+                                このサークルにはどんな人がいるの？<br>
+                                何をしているの？
+                            </p>
+
+                            <!-- ★ ボタンの文字を変更 -->
+                            <button class="introduction-button">
+                                MIZUMATCHについて
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+            </section>      
+            <!-- 活動報告 -->
+            <section id="activity" class="activity">
+            <div class="activity-inner">
+
+                <h2 class="section-title">活動報告</h2>
+
+                <div class="activity-wrapper">
+                <button class="slide-btn prev" aria-label="前へ">‹</button>
+
+                <div class="activity-slider" id="activitySlider">
+
+                    <article class="activity-card">
+                    <a href="activity-detail.html?id=1" class="card-link">
+                        <div class="card-image">
+                        <img src="https://placehold.jp/600x600.png" alt="">
+                        </div>
+
+                        <div class="card-body">
+                        <h3 class="card-title">活動タイトル 1</h3>
+                        <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                        <time class="card-date">2026.01.05</time>
+                        </div>
+                    </a>
+                    </article>
+
+                    <article class="activity-card">
+                    <a href="activity-detail.html?id=2" class="card-link">
+                        <div class="card-image">
+                        <img src="https://placehold.jp/600x600.png" alt="">
+                        </div>
+
+                        <div class="card-body">
+                        <h3 class="card-title">活動タイトル 2</h3>
+                        <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                        <time class="card-date">2026.01.04</time>
+                        </div>
+                    </a>
+                    </article>
+
+                    <article class="activity-card">
+                    <a href="activity-detail.html?id=3" class="card-link">
+                        <div class="card-image">
+                        <img src="https://placehold.jp/600x600.png" alt="">
+                        </div>
+
+                        <div class="card-body">
+                        <h3 class="card-title">活動タイトル 3</h3>
+                        <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                        <time class="card-date">2026.01.03</time>
+                        </div>
+                    </a>
+                    </article>
+
+                    <article class="activity-card">
+                    <a href="activity-detail.html?id=3" class="card-link">
+                        <div class="card-image">
+                        <img src="https://placehold.jp/600x600.png" alt="">
+                        </div>
+
+                        <div class="card-body">
+                        <h3 class="card-title">活動タイトル 4</h3>
+                        <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                        <time class="card-date">2026.01.03</time>
+                        </div>
+                    </a>
+                    </article>
+
+                    <article class="activity-card">
+                    <a href="activity-detail.html?id=3" class="card-link">
+                        <div class="card-image">
+                        <img src="https://placehold.jp/600x600.png" alt="">
+                        </div>
+
+                        <div class="card-body">
+                        <h3 class="card-title">活動タイトル 5</h3>
+                        <p class="card-text">活動内容の簡単な説明が入ります。</p>
+                        <time class="card-date">2026.01.03</time>
+                        </div>
+                    </a>
+                    </article>
+
+                </div>
+
+                <button class="slide-btn next" aria-label="次へ">›</button>
+                </div>
+
+            </div>
+            </section>
+            <!-- 協賛 -->
+            <!-- sns -->
+            <section id="sns-section" class="sns-section">
+                <div class="sns-inner">
+                    <h2 class="sns-title">公式SNS</h2>
+
+                    <div class="sns-list">
+                        <!-- Instagram -->
+                        <div class="sns-card">
+                            <div class="sns-icon">
+                                <img src="./image/Instagram.png" alt="Instagram">
+                            </div>
+
+                            <div class="sns-content">
+                                <h3 class="sns-card-title">Instagram</h3>
+                                <p class="sns-text">日常の活動を投稿</p>
+                                <a href="https://www.instagram.com/mizumatch_wkwk"
+                                target="_blank"
+                                class="sns-link">
+                                    mizumatch_wkwk
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Facebook -->
+                        <div class="sns-card">
+                            <div class="sns-icon">
+                                <img src="./image/Facebook.png" alt="Facebook">
+                            </div>
+
+                            <div class="sns-content">
+                                <h3 class="sns-card-title">Facebook</h3>
+                                <p class="sns-text">イベント情報やお知らせを掲載</p>
+                                <a href="https://www.facebook.com/mizumatch"
+                                target="_blank"
+                                class="sns-link">
+                                    ミズ マチ子 (@mizumatch)
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Gmail -->
+                        <div class="sns-card">
+                            <div class="sns-icon">
+                                <img src="./image/Gmail.png" alt="Gmail">
+                            </div>
+
+                            <div class="sns-content">
+                                <h3 class="sns-card-title">Gmail</h3>
+                                <p class="sns-text">ご質問・参加希望はこちらへ</p>
+                                <a href="mailto:xxxxxxxx@gmail.com"
+                                class="sns-link">
+                                    xxxxxxxx@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- 問い合わせ -->
+        </section>
+        <!-- ==========================
+                    サークル
+        =========================== -->
+        <section id="page-circle" class="main-section">
+            <!-- MIZUMATCHについて section-1 -->
+            <section class="about" id="about">
+            <div class="about-inner">
+                <h2 class="section-title">
+                <span>MIZUMATCHについて</span>
+                </h2>
+
+                <div class="about-content">
+                <!-- 左：画像 -->
+                <div class="about-image">
+                    <img src="./image/MIZUMATCH.jpg" alt="MIZUMATCHについて">
+                </div>
+
+                <!-- 右：文章 -->
+                <div class="about-text-area">
+                    <p class="about-text about-main">
+                    MIZUMATCHは <strong>2019年6月</strong> に創立
+                    </p>
+
+                    <p class="about-text about-sub">
+                    長野大学公認サークル
+                    </p>
+
+                    <p class="about-text">
+                    ボランティア活動やイベントの企画・運営
+                    </p>
+
+                    <!-- 人数 -->
+                    <div class="about-members">
+                    <p class="about-text members-title">現在の活動人数</p>
+                    <p class="about-text members-line">
+                        2年：21人　／　1年：40人
+                        <span class="members-total">計64人</span>
+                    </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </section>
+            <!-- mottoについて section-2 -->
+            <section class="motto-vision">
+            <div class="motto-vision-inner">
+
+                <!-- セクションタイトル -->
+                <h2 class="section-title">
+                <span>motto</span>
+                </h2>
+
+                <!-- 上段：画像＋コンセプト -->
+                <div class="motto-content">
+                <div class="motto-image">
+                    <img src="./image/MIZUMATCH-1.png" alt="MIZUMATCH コンセプト">
+                </div>
+
+                <div class="motto-text">
+                    <p class="motto-equation">
+                    水の活性化<span class="motto-x">×</span>町の活性化
+                    </p>
+
+                    <p class="motto-brand">MIZUMATCH</p>
+
+                    <p class="motto-copy">
+                    水と街をマッチングさせたまちづくり
+                    </p>
+                </div>
+                </div>
+
+                <!-- 下段：ビジョン -->
+                <div class="vision-block">
+                <h3 class="vision-catch">
+                    <span>学生の力でまちに新しい流れを。</span>
+                    <span>学生の力でまちにうるおいを。</span>
+                </h3>
+                </div>
+
+            </div>
+            </section>
+            <!-- これまでの活動 section-3 -->
+            <section class="section3-activities">
+            <div class="section3-inner">
+
+                <h2 class="section3-title">
+                <span>これまでの活動</span>
+                </h2>
+
+                <p class="section3-lead">主なボランティア活動</p>
+
+                <!-- 強調カード 横並び -->
+                <div class="section3-highlight-list">
+                <div class="section3-highlight-card">
+                    <h3 class="section3-highlight-name">キモノマルシェ in 信州上田</h3>
+                    <div class="section3-highlight-image">
+                    <img src="images/activity-2024.jpg" alt="キモノマルシェ in 信州上田">
+                    </div>
+                    <time class="section3-highlight-year">2024年</time>
+                    <p class="section3-highlight-text">
+                    着物文化の魅力を発信する地域イベント。
+                    会場設営や来場者対応を通じて、地域文化と観光の活性化に貢献しました。
+                    </p>
+                    <a href="kimono-marche.html" class="section3-highlight-link">イベント詳細</a>
+                </div>
+
+                <div class="section3-highlight-card">
+                    <h3 class="section3-highlight-name">産業未来フェス</h3>
+                    <div class="section3-highlight-image">
+                    <img src="images/activity-2025.jpg" alt="産業未来フェス">
+                    </div>
+                    <time class="section3-highlight-year">2025年11月</time>
+                    <p class="section3-highlight-text">
+                    地域企業と学生をつなぐ産業イベント。
+                    受付対応、会場案内、ステージ運営補助を担当し、
+                    来場者が円滑にイベントを楽しめる環境づくりに貢献しました。
+                    </p>
+                    <a href="industry-future-fes.html" class="section3-highlight-link">イベント詳細</a>
+                </div>
+                </div>
+
+                <!-- 通常カード -->
+                <ul class="section3-list">
+
+                <li class="section3-card">
+                    <div class="section3-summary">
+                    <div>
+                        <time class="section3-year">2020年～2026年</time>
+                        <p class="section3-name">上田氷灯ろう夢まつり</p>
+                    </div>
+                    <button class="section3-toggle">詳細情報</button>
+                    </div>
+                    <div class="section3-detail">
+                    <div class="section3-detail-image">
+                        <img src="images/no-image.jpg" alt="上田氷灯ろう夢まつり">
+                    </div>
+                    <div class="section3-detail-content">
+                        <h3>上田氷灯ろう夢まつり</h3>
+                        <p>
+                        冬の上田を彩る幻想的な祭り。
+                        複数年にわたり設営・運営補助を担当し、
+                        地域行事の継続と発展に貢献しました。
+                        </p>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="section3-card">
+                    <div class="section3-summary">
+                    <div>
+                        <time class="section3-year">2023年～2025年</time>
+                        <p class="section3-name">別所線とは走ろう、歩こう!! ラン＆ウォーク</p>
+                    </div>
+                    <button class="section3-toggle">詳細情報</button>
+                    </div>
+                    <div class="section3-detail">
+                    <div class="section3-detail-image">
+                        <img src="images/no-image.jpg" alt="別所線とは走ろう、歩こう!! ラン＆ウォーク">
+                    </div>
+                    <div class="section3-detail-content">
+                        <h3>別所線とは走ろう、歩こう!! ラン＆ウォーク</h3>
+                        <p>
+                        地域鉄道を盛り上げる健康促進イベント。
+                        受付・誘導・安全管理の補助を行い、参加者が安心して楽しめる運営を支えました。
+                        </p>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="section3-card">
+                    <div class="section3-summary">
+                    <div>
+                        <time class="section3-year">2023年～2025年</time>
+                        <p class="section3-name">信州ルネッサンス野外フェスティバル</p>
+                    </div>
+                    <button class="section3-toggle">詳細情報</button>
+                    </div>
+                    <div class="section3-detail">
+                    <div class="section3-detail-image">
+                        <img src="images/no-image.jpg" alt="信州ルネッサンス野外フェスティバル">
+                    </div>
+                    <div class="section3-detail-content">
+                        <h3>信州ルネッサンス野外フェスティバル</h3>
+                        <p>
+                        音楽と文化を融合した野外フェス。
+                        会場設営、運営補助、来場者案内を通じてイベント成功に貢献しました。
+                        </p>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="section3-card">
+                    <div class="section3-summary">
+                    <div>
+                        <time class="section3-year">2023年～2025年</time>
+                        <p class="section3-name">花火を楽しむ会</p>
+                    </div>
+                    <button class="section3-toggle">詳細情報</button>
+                    </div>
+                    <div class="section3-detail">
+                    <div class="section3-detail-image">
+                        <img src="images/no-image.jpg" alt="花火を楽しむ会">
+                    </div>
+                    <div class="section3-detail-content">
+                        <h3>花火を楽しむ会</h3>
+                        <p>
+                        地域の夏のイベントで、観覧エリアの整理や安全管理を担当。
+                        来場者が安心して花火を楽しめる運営をサポートしました。
+                        </p>
+                    </div>
+                    </div>
+                </li>
+
+                <li class="section3-card">
+                    <div class="section3-summary">
+                    <div>
+                        <time class="section3-year">2023年～2025年</time>
+                        <p class="section3-name">信州爆水RUN in 衣田川</p>
+                    </div>
+                    <button class="section3-toggle">詳細情報</button>
+                    </div>
+                    <div class="section3-detail">
+                    <div class="section3-detail-image">
+                        <img src="images/no-image.jpg" alt="信州爆水RUN in 衣田川">
+                    </div>
+                    <div class="section3-detail-content">
+                        <h3>信州爆水RUN in 衣田川</h3>
+                        <p>
+                        水辺で楽しむランニングイベント。
+                        参加者の安全管理や運営補助を行い、イベント成功に貢献しました。
+                        </p>
+                    </div>
+                    </div>
+                </li>
+
+                </ul>
+
+            </div>
+            </section>
+        </section>
+        <!-- ==========================
+                    イベント
+        =========================== -->
+        <section id="page-event" class="main-section">
+            <h2>イベント</h2>
+            <p>イベントの内容です。</p>
+        </section>
+        <!-- ==========================
+                    ボランティア活動
+        =========================== --> 
+        <section id="page-volunteer" class="main-section">
+            <h2>ボランティア</h2>
+            <p>ボランティアの内容です。</p>
+        </section>
+        <!-- トップへ戻るボタン -->
+        <button class="back-to-top" aria-label="ページのトップへ戻る">↑ ページトップへ</button>
+        <!-- フローティングイベントバッジ -->
+<a href="#page-event" class="floating-event-badge">
+  <span class="badge-top">MATCH</span>
+  <span class="badge-middle">フェス2026</span>
+  <span class="badge-bottom">4.26</span>
+</a>
+
+    </main>
+    <!-- ==========================
+            フッター部
+    =========================== -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- 左：ナビ -->
+            <div class="footer-left">
+                <nav class="footer-nav">
+                    <ul class="footer-nav-list">
+                        <li><a href="#">ホーム</a></li>
+                        <li><a href="#">私たちについて</a></li>
+                        <li><a href="#">イベント情報</a></li>
+                        <li><a href="#">ブログ</a></li>
+                        <li><a href="#">お問い合わせ</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- 中央：イベント -->
+            <div class="footer-center">
+                <h3 class="footer-center-title">イベント情報</h3>
+                <ul class="footer-event-list">
+                    <li><a href="#">イベント詳細</a></li>
+                    <li><a href="#">申込方法</a></li>
+                    <li><a href="#">過去のイベント</a></li>
+                </ul>
+            </div>
+
+            <!-- 右：SNS -->
+            <div class="footer-right">
+                <div class="footer-sns">
+                    <a href="#" class="sns-link" aria-label="Instagram">
+                        <span class="sns-icon">
+                            <img src="./image/Instagram.png" alt="">
+                        </span>
+                        <span class="sns-name">Instagram</span>
+                    </a>
+
+                    <a href="#" class="sns-link" aria-label="Facebook">
+                        <span class="sns-icon">
+                            <img src="./image/Facebook.png" alt="">
+                        </span>
+                        <span class="sns-name">Facebook</span>
+                    </a>
+
+                    <a href="#" class="sns-link" aria-label="Gmail">
+                        <span class="sns-icon">
+                            <img src="./image/Gmail.png" alt="">
+                        </span>
+                        <span class="sns-name">Gmail</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-copy-container">
+            <p class="footer-copy">© 2026 MIZUMATCH</p>
+        </div>
+    </footer>
+    <!-- ==========================
+                JS部
+    =========================== -->
+    <script src="./js/header.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/activitiy-report.js"></script>
+    <script src="./js/all/button-top.js"></script>
+    <script src="./js/all/event-badge.js"></script>
+</body>
+</html>
