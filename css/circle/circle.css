@@ -1,0 +1,165 @@
+/* ==================================================
+   ▼ よく編集する設定（ここだけ触ればOK）
+================================================== */
+:root{
+    /* メインカラー（ボタン・アクセント） */
+    --main-color: #1F5199;
+
+    /* ホバー時の色 */
+    --main-color-hover: #abd5fb;
+
+    /* 文字サイズ */
+    --title-font-size: 40px;
+    --text-font-size: 24px;
+    --button-font-size: 16px;
+
+    /* 余白（全体の空間） */
+    --section-padding: 60px;
+    --item-gap: 24px;
+
+    /* 角丸 */
+    --image-radius: 16px;
+    --button-radius: 999px;
+}
+
+/* ==================================================
+   サークル紹介セクション全体
+================================================== */
+.circle{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--section-padding) 20px;
+}
+
+/* 左右レイアウト */
+.circle-box{
+    display: flex;
+    gap: 40px; /* 左右の間隔 */
+}
+
+/* 左右共通設定 */
+.circle-box-left,
+.circle-box-right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* ==================================================
+   左側：画像エリア
+================================================== */
+.circle-image-box{
+    width: 100%;
+    aspect-ratio: 3 / 4; /* ★ 画像の縦横比 */
+}
+
+.circle-image-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 画像をはみ出さずに表示 */
+    border-radius: var(--image-radius);
+}
+
+/* ==================================================
+   右側：テキストエリア（縦中央）
+================================================== */
+.circle-box-right{
+    align-items: center; /* 縦方向の中央寄せ */
+}
+
+.introduction-text-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: var(--item-gap); /* タイトル・文章・ボタンの間隔 */
+}
+
+/* タイトル */
+.introduction-title{
+    text-align: center;
+    font-size: var(--title-font-size);
+}
+
+/* 紹介文 */
+.introduction-text{
+    text-align: center;
+    font-size: var(--text-font-size);
+    line-height: 1.8;
+}
+
+/* ==================================================
+   ボタン
+================================================== */
+.introduction-button{
+    align-self: center;
+    padding: 14px 32px;
+    font-size: var(--button-font-size);
+    font-weight: 600;
+
+    background: var(--main-color);
+    color: #fff;
+
+    border: none;
+    border-radius: var(--button-radius);
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.introduction-button:hover{
+    background: var(--main-color-hover);
+    transform: translateY(-2px);
+}
+
+/* ==================================================
+   スマホ対応
+================================================== */
+@media (max-width: 768px){
+
+    /* セクション全体の余白を少し詰める */
+    .circle{
+        padding: 40px 16px;
+    }
+
+    /* 縦並び */
+    .circle-box{
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    /* =======================
+       画像を横長カードに
+    ======================= */
+    .circle-image-box{
+        aspect-ratio: 16 / 9; /* スマホは横長が見やすい */
+    }
+
+    /* =======================
+       テキストエリア
+    ======================= */
+    .introduction-text-box{
+        gap: 20px;
+        max-width: 500px;  /* 横に広がりすぎない */
+        margin: 0 auto;
+    }
+
+    .introduction-title{
+        font-size: 26px;
+        line-height: 1.4;
+    }
+
+    .introduction-text{
+        font-size: 17px;
+        line-height: 1.9;
+    }
+
+    /* =======================
+       ボタン（押しやすく）
+    ======================= */
+    .introduction-button{
+        width: 100%;
+        max-width: 280px;
+        padding: 16px 0;
+        font-size: 16px;
+    }
+}

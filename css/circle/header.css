@@ -1,0 +1,217 @@
+/* =========================
+   ヘッダー全体
+========================= */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+/* =========================
+   サークル名
+========================= */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.site-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.site-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--main-color);
+}
+
+/* =========================
+   PCナビ
+========================= */
+.nav-pc ul {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-pc a {
+    font-weight: 600;
+    position: relative;
+}
+
+.nav-pc a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    transition: width 0.3s ease;
+}
+
+.nav-pc a:hover::after {
+    width: 100%;
+}
+
+/* =========================
+   ハンバーガー
+========================= */
+.hamburger {
+    display: none;
+    position: absolute;
+    left: 16px;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    position: absolute;
+    left: 4px;
+    width: 24px;
+    height: 2px;
+    background: var(--main-color);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.hamburger span:nth-child(1) { top: 8px; }
+.hamburger span:nth-child(2) { top: 15px; }
+.hamburger span:nth-child(3) { top: 22px; }
+
+/* ハンバーガー ✕ アニメーション */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================
+   スマホメニュー（左スライド）
+========================= */
+.nav-sp {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100dvh;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(.25,.8,.25,1);
+    padding-top: 80px;
+    z-index: 999;
+}
+
+.nav-sp.active {
+    transform: translateX(0);
+}
+
+.nav-sp-list {
+    padding: 0 24px;
+}
+
+.nav-sp-list li {
+    margin: 24px 0;
+}
+
+.nav-sp-list a {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* スマホメニュー下部 */
+.nav-sp-footer {
+    margin-top: auto;
+    padding: 24px;
+}
+
+/* =========================
+   オーバーレイ（メニュー外タップで閉じる）
+========================= */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 998;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =========================
+   スマホ専用レイアウト
+========================= */
+@media (max-width: 1023px) {
+    .header-inner {
+        display: flex;
+        justify-content: space-between; /* 左・中央・右 */
+        align-items: center;
+        position: relative;
+        padding: 16px;
+    }
+
+    /* ハンバーガー左端 */
+    .hamburger {
+        position: relative; /* absolute ではなく relative に */
+        left: 0;
+        top: 0;
+        transform: none;
+        display: block;
+        flex-shrink: 0;
+        z-index: 1001;
+    }
+
+    /* タイトル中央 */
+    .header-left {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 0 auto;
+        flex-shrink: 0;
+    }
+
+    /* 色ボタン右端 */
+    .color-sp-right {
+        position: relative;
+        right: 0;
+        top: auto;
+        transform: none;
+        flex-shrink: 0;
+        z-index: 1002;
+        display: inline-block;
+    }
+
+    .nav-pc,
+    .pc-only {
+        display: none;
+    }
+
+    .sp-only {
+        display: inline-block;
+    }
+}

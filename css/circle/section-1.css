@@ -1,0 +1,124 @@
+/* =========================
+   MIZUMATCHについて
+========================= */
+.about {
+  padding: 80px 20px;
+}
+
+.about-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* タイトル（文字幅だけ下線） */
+.section-title {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.section-title span {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1F5199;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #1F5199;
+}
+
+/* 左右分割（1:2） */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* 画像 */
+.about-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+/* 文章 */
+.about-text-area {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.about-text {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #444;
+}
+
+/* メイン情報 */
+.about-main {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #1F5199;
+}
+
+.about-main strong {
+  font-weight: 700;
+  color: #1F5199;
+}
+
+/* サブ情報 */
+.about-sub {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #1F5199;
+}
+
+/* 人数ブロック */
+.about-members {
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #ddd;
+}
+
+.members-title {
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.members-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+}
+
+/* 計64人 強調 */
+.members-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1F5199;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 16px;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+  }
+}
