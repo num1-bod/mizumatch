@@ -1,0 +1,87 @@
+/* =========================
+   event hero section
+========================= */
+.event-hero {
+  width: 100%;
+  padding: 24px 0; /* ← セクション上下余白（よく変更） */
+}
+
+/* 中央寄せ・横幅制御 */
+.event-hero__inner {
+  max-width: 1100px; /* ← 最大横幅 */
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+/* =========================
+   見出し
+========================= */
+.event-hero__title {
+  display: inline-block; /* ← 下線を文字幅に合わせる */
+  font-size: clamp(24px, 4vw, 40px);
+  font-weight: bold;
+  color: #1F5199;
+
+  margin-bottom: 20px;
+  padding-bottom: 6px;
+  border-bottom: 3px solid #1F5199; /* ← 見出し下線 */
+}
+
+/* =========================
+   画像
+========================= */
+.event-hero__image {
+  width: 100%;
+}
+
+.event-hero__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  border-radius: 16px;        /* ← 角丸 */
+  border: 1px solid #e0e0e0;  /* ← 画像の境界線 */
+  box-sizing: border-box;
+}
+
+/* =========================
+   ボタン
+========================= */
+.event-hero__button {
+  display: inline-block;
+  margin-top: 24px;          /* ← 画像との距離 */
+  padding: 14px 32px;        /* ← ボタンサイズ */
+
+  font-size: 16px;
+  font-weight: bold;
+
+  /* ▼ よく変更する配色はここ ▼ */
+  color: #1F5199;            /* ← 文字色（枠線と共通） */
+  background-color: #ffffff;/* ← ボタン背景色 */
+  border: 2px solid #1F5199; /* ← 枠線（文字色と同じ） */
+
+  border-radius: 9999px;     /* ← 丸み */
+  text-decoration: none;
+
+  transition: background-color 0.2s ease,
+              color 0.2s ease,
+              transform 0.2s ease;
+}
+
+/* hover時 */
+.event-hero__button:hover {
+  background-color: #1F5199; /* ← hover背景 */
+  color: #ffffff;            /* ← hover文字色 */
+  transform: translateY(1px);
+}
+
+/* =========================
+   スマホ対応
+========================= */
+@media (max-width: 768px) {
+  .event-hero__button {
+    width: 100%;
+    max-width: 320px;
+  }
+}

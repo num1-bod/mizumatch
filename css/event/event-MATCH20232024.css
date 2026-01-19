@@ -1,0 +1,178 @@
+/* =========================
+   セクション全体
+========================= */
+.event-MATCH20232024 {
+  width: 100%;
+  padding: 32px 20px;
+}
+
+.event-MATCH20232024__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* =========================
+   見出し
+========================= */
+.event-MATCH20232024__title {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.event-MATCH20232024__title-text {
+  display: inline-block;
+  font-size: 34px;
+  font-weight: bold;
+  color: #1F5199;
+  padding-bottom: 4px;
+  border-bottom: 3px solid #1F5199;
+}
+
+/* =========================
+   イベント枠
+========================= */
+.event-MATCH20232024__item {
+  padding: 24px;
+  border: 2px solid #c6c6c6;
+  border-radius: 16px;
+}
+
+/* =========================
+   日付・タイトル
+========================= */
+.event-MATCH20232024__date {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1F5199;
+  margin-bottom: 6px;
+}
+
+.event-MATCH20232024__event-title {
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  color: #1F5199;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #1F5199;
+}
+
+/* =========================
+   本体レイアウト
+========================= */
+.event-MATCH20232024__body {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+}
+
+.event-MATCH20232024__content {
+  flex: 2;
+}
+
+/* =========================
+   情報リスト
+========================= */
+.event-MATCH20232024__info-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.event-MATCH20232024__info-row:last-child {
+  border-bottom: none;
+}
+
+/* ラベル（見出し用デザイン） */
+.event-MATCH20232024__label {
+  width: 140px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #1F5199;
+  border: 2px solid #1F5199;
+  border-radius: 9999px;
+  white-space: nowrap;
+}
+
+.event-MATCH20232024__text {
+  font-size: 18px;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* =========================
+   後援：2行目用インデント
+========================= */
+/* PCでは通常表示（改行しない） */
+.event-MATCH20232024__indent {
+  display: inline;
+}
+
+/* =========================
+   画像
+========================= */
+.event-MATCH20232024__image {
+  flex: 1;
+  aspect-ratio: 16 / 9;
+  border-radius: 16px;
+  border: 2px solid #c6c6c6;
+  overflow: hidden;
+  background-color: #f2f2f2;
+  position: relative;
+}
+
+.event-MATCH20232024__image img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =========================
+   スマホ対応
+========================= */
+@media (max-width: 768px) {
+
+  .event-MATCH20232024 {
+    padding: 24px 14px;
+  }
+
+  .event-MATCH20232024__item {
+    padding: 14px;
+  }
+
+  /* 画像は非表示 */
+  .event-MATCH20232024__image {
+    display: none;
+  }
+
+  /* 文字サイズ調整 */
+  .event-MATCH20232024__title-text {
+    font-size: 24px;
+  }
+
+  .event-MATCH20232024__date,
+  .event-MATCH20232024__event-title {
+    font-size: 14px;
+  }
+
+  .event-MATCH20232024__label {
+    width: 96px;
+    font-size: 11px;
+    padding: 4px 0;
+  }
+
+  .event-MATCH20232024__text {
+    font-size: 12px;
+  }
+
+  /* スマホ時のみ2行目を字下げ表示 */
+  .event-MATCH20232024__indent {
+    display: block;
+    margin-left: 5.5em; /* 「◎2023年：」分のインデント */
+  }
+}
