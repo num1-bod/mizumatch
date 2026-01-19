@@ -1,0 +1,141 @@
+/* =========================================
+   基本設定（リセット寄り）
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue",
+    "Segoe UI", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+/* =========================================
+   スマホ専用 下ナビ（ヘッダー直下用）
+========================================= */
+
+.sp-nav-section {
+  display: none;
+}
+
+.sp-nav {
+  width: 100%;
+}
+
+.sp-nav-list {
+  display: flex;
+  margin: 0;
+  padding: 8px 0;
+  list-style: none;
+}
+
+.sp-nav-item {
+  flex: 1;
+  text-align: center;
+}
+
+.sp-nav-link {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1F5199;
+  position: relative;
+}
+
+/* アクティブ表示 */
+.sp-nav-link.is-active {
+  font-weight: 700;
+}
+
+.sp-nav-link.is-active::after {
+  content: "";
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  bottom: 0;
+  height: 2px;
+  background-color: #1F5199;
+  border-radius: 2px;
+}
+
+/* =========================================
+   メインコンテンツ切り替え
+========================================= */
+
+.main-content {
+  width: 100%;
+}
+
+.main-section {
+  display: none;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* 表示中 */
+.main-section.is-active {
+  display: block;
+  animation: fadeSlideUp 0.45s ease forwards;
+}
+
+/* 切り替えアニメーション */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================
+   PC / SP 表示制御
+========================================= */
+
+/* PCナビ（デフォルト表示） */
+.nav-pc {
+  display: block;
+}
+
+/* スマホ時のみ表示 */
+@media screen and (max-width: 1023px) {
+  .nav-pc {
+    display: none;
+  }
+
+  .sp-nav-section {
+    display: block;
+  }
+}
+/* =========================================
+   PCナビ 現在地表示（下線のみ）
+========================================= */
+
+.nav-pc a {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* アクティブ時 */
+.nav-pc a.is-active {
+  font-weight: 700;
+}
+
+/* 下線 */
+.nav-pc a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  background-color: #1F5199;
+  border-radius: 2px;
+}

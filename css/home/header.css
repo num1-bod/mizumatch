@@ -1,0 +1,95 @@
+:root {
+  --main-color: #00aaff;
+  --bg-color: #ffffff;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  background: var(--bg-color);
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.site-icon { width: 40px; height: 40px; border-radius: 50%; }
+.site-title { font-size: 20px; font-weight: 700; color: var(--main-color); }
+
+.nav-pc ul { display: flex; gap: 32px; padding:0; margin:0; list-style:none; }
+.nav-pc a { font-weight:600; position:relative; text-decoration:none; color:#333; }
+.nav-pc a::after { content:""; position:absolute; left:0; bottom:-4px; width:0; height:2px; background:var(--main-color); transition: width 0.3s ease; }
+.nav-pc a:hover::after, .nav-pc a.is-active::after { width:100%; }
+
+.header-right .btn-primary { padding:8px 20px; background:var(--main-color); color:#fff; border:none; border-radius:6px; font-weight:600; cursor:pointer; transition:0.3s; }
+.header-right .btn-primary:hover { background:#009ecf; }
+
+.hamburger { display:none; position:absolute; left:16px; width:32px; height:32px; background:none; border:none; cursor:pointer; z-index:1001; }
+.hamburger span { position:absolute; left:4px; width:24px; height:2px; background:var(--main-color); }
+.hamburger span:nth-child(1){ top:8px; }
+.hamburger span:nth-child(2){ top:15px; }
+.hamburger span:nth-child(3){ top:22px; }
+.hamburger.active span:nth-child(1){ transform:translateY(7px) rotate(45deg);}
+.hamburger.active span:nth-child(2){ opacity:0; }
+.hamburger.active span:nth-child(3){ transform:translateY(-7px) rotate(-45deg); }
+
+.nav-sp {
+  position: fixed;
+  top:0;
+  left:0;
+  width:80%;
+  height:100dvh;
+  transform: translateX(-100%);
+  transition: transform 0.4s cubic-bezier(.25,.8,.25,1); /* スライドのみ */
+  padding-top:80px;
+  z-index:999;
+  background: var(--bg-color);
+  pointer-events: none;
+}
+
+.nav-sp.active {
+  transform: translateX(0);
+  pointer-events: auto;
+}
+
+.nav-sp-list { padding:0 24px; }
+.nav-sp-list li { margin:24px 0; list-style:none; }
+.nav-sp-list a { font-size:18px; font-weight:600; text-decoration:none; color:#333; transition: none; } /* アニメーション削除 */
+
+.overlay {
+  position: fixed;
+  inset:0;
+  background: rgba(0,0,0,0.3);
+  opacity:0;
+  visibility:hidden;
+  z-index:998;
+}
+
+.overlay.active { opacity:1; visibility:visible; }
+
+@media (max-width: 1023px) {
+  .hamburger { display:block; position:relative; left:0; top:0; transform:none; }
+  .header-left { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); }
+  .nav-pc, .header-right { display:none; }
+}
+
+@media (min-width:1024px) {
+  .header-inner { display:flex; align-items:center; justify-content:space-between; position:relative; }
+  .nav-pc { position:absolute; left:50%; transform:translateX(-50%); display:flex; gap:32px; }
+  .hamburger { display:none; }
+}
