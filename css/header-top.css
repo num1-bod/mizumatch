@@ -15,7 +15,7 @@
   --header-top-text-white: #ffffff;      /* プレースホルダーなどの白抜き文字 */
 
   /* --- サイズ調整 (ロゴ・ヘッダー) --- */
-  --header-top-height: 65px;            /* ヘッダーの高さ */
+  --header-top-height: 50px;            /* ヘッダーの高さ */
   --header-top-logo-size: 40px;         /* 丸いロゴの直径 */
   --header-top-circle-name-color: #1F5199; /* サークル名前文字の色 */
   --header-top-font-size: 1.15rem;      /* MIZUMATCHの文字大きさ */
