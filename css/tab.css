@@ -1,16 +1,58 @@
 :root {
+  /* --- 共通設定 (Base) --- */
   --tab-main-color: #1F5199;      
   --tab-bg-color: #E5ECF2;        
   --tab-text-color: #555555;      
   --tab-inactive-line-color: #CCC; 
-  --tab-h: 60px;                  
-  --tab-line-weight: 3px;         
-  --tab-font-size: 15px;          
-  --tab-transition: 0.3s;
   --max-width: 1500px;
+  --tab-transition: 0.3s;
+  --tab-line-weight: 3px;
+  --tab-line-bottom: 0px;
+  --tab-padding-x: 10px;
+
+  /* --- PC用の設定 (Default) --- */
+  --pc-tab-h: 60px;
+  --pc-tab-font-size: 15px;
+  --pc-tab-line-width: 80%;
+
+  /* --- タブレット用の設定 --- */
+  --tablet-tab-h: 50px;
+  --tablet-tab-font-size: 15px;
+  --tablet-tab-line-width: 80%;
+
+  /* --- スマホ用の設定 --- */
+  --sp-tab-h: 40px;
+  --sp-tab-font-size: 13px;
+  --sp-tab-line-width: 90%;
+
+  /* --- 動的に切り替わる変数（初期値はPC） --- */
+  --current-tab-h: var(--pc-tab-h);
+  --current-tab-font-size: var(--pc-tab-font-size);
+  --current-tab-line-width: var(--pc-tab-line-width);
 }
 
-/* 基本設定：JS実行前は全て隠す */
+/* --- メディアクエリ：変数の中身だけを切り替え --- */
+
+/* タブレット (601px〜1200px) */
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  :root {
+    --current-tab-h: var(--tablet-tab-h);
+    --current-tab-font-size: var(--tablet-tab-font-size);
+    --current-tab-line-width: var(--tablet-tab-line-width);
+  }
+}
+
+/* スマホ (〜600px) */
+@media screen and (max-width: 600px) {
+  :root {
+    --current-tab-h: var(--sp-tab-h);
+    --current-tab-font-size: var(--sp-tab-font-size);
+    --current-tab-line-width: var(--sp-tab-line-width);
+  }
+}
+
+/* --- スタイル定義 (デザイン変更なし) --- */
+
 .tab-group, .tab-content, .pc-content-group, .tablet-content-group, .sp-content-group {
   display: none;
 }
@@ -18,55 +60,60 @@
 .fixed-header {
   position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
   background-color: var(--tab-bg-color);
-  /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); tabの下の灰色 */
 }
 
 .tab-group {
   width: 100%; max-width: var(--max-width);
   margin: 0 auto; padding: 0; list-style: none;
+  display: flex;
   justify-content: space-between;
 }
 
 .tab-link {
-  flex: 1; height: var(--tab-h);
-  background: transparent; border: none; cursor: pointer;
-  position: relative; display: flex; align-items: center; justify-content: center;
-  font-size: var(--tab-font-size); color: var(--tab-text-color);
+  flex: 1; 
+  height: var(--current-tab-h); /* 動的変数を使用 */
+  padding: 0 var(--tab-padding-x);
+  background: transparent; 
+  border: none; 
+  cursor: pointer;
+  position: relative; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: var(--current-tab-font-size); /* 動的変数を使用 */
+  color: var(--tab-text-color);
   transition: all var(--tab-transition);
+  white-space: nowrap;
 }
 
-/* 下線の隙間デザイン */
 .tab-link::after {
-  content: ""; position: absolute; bottom: 0; left: 10%; width: 80%;
+  content: ""; 
+  position: absolute; 
+  bottom: var(--tab-line-bottom);
+  left: calc((100% - var(--current-tab-line-width)) / 2); /* 動的変数を使用 */
+  width: var(--current-tab-line-width); /* 動的変数を使用 */
   border-bottom: var(--tab-line-weight) solid var(--tab-inactive-line-color);
 }
 
 .tab-link.active { color: var(--tab-main-color); font-weight: bold; }
 .tab-link.active::after { border-bottom-color: var(--tab-main-color); }
 
-/* --- 条件分岐：PC (1201px〜) --- */
+/* 表示・非表示の制御のみメディアクエリに残す */
 @media screen and (min-width: 1201px) {
   .pc-tabs { display: flex !important; }
   .pc-content-group { display: block !important; }
-  /* 他を強制非表示 */
   .tablet-tabs, .sp-tabs, .tablet-content-group, .sp-content-group { display: none !important; }
 }
 
-/* --- 条件分岐：タブレット (601px〜1200px) --- */
 @media screen and (max-width: 1200px) and (min-width: 601px) {
   .tablet-tabs { display: flex !important; }
   .tablet-content-group { display: block !important; }
-  /* 他を強制非表示 */
   .pc-tabs, .sp-tabs, .pc-content-group, .sp-content-group { display: none !important; }
 }
 
-/* --- 条件分岐：スマホ (〜600px) --- */
 @media screen and (max-width: 600px) {
-  :root { --tab-h: 50px; --tab-font-size: 13px; }
   .sp-tabs { display: flex !important; }
   .sp-content-group { display: block !important; }
-  .tab-link::after { left: 5%; width: 90%; }
-  /* 他を強制非表示 */
   .pc-tabs, .tablet-tabs, .pc-content-group, .tablet-content-group { display: none !important; }
 }
 
@@ -75,5 +122,3 @@
   max-width: var(--max-width); margin: 0 auto;
   padding-left: 15px; padding-right: 15px;
 }
-
-
