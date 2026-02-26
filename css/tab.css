@@ -1,6 +1,6 @@
 :root {
   --tab-main-color: #1F5199;      
-  --tab-bg-color: #ffffff;        
+  --tab-bg-color: #E5ECF2;        
   --tab-text-color: #555555;      
   --tab-inactive-line-color: #e0e0e0; 
   --tab-h: 60px;                  
@@ -75,3 +75,4 @@
   max-width: var(--max-width); margin: 0 auto;
   padding-left: 15px; padding-right: 15px;
 }
+
