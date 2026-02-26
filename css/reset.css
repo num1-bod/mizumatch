@@ -1,8 +1,0 @@
-@charset "UTF-8";
-
-/* サイト全体に適用する場合 */
-body {
-  font-family: "Noto Sans JP", sans-serif;
-  /* 背景色の設定 */
-  background-color: #E5ECF2;
-}
