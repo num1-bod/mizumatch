@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIZUMATCH 公式サイト</title>
+    <!-- フォント適応 -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CSS 適応 -->
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/header-top.css">
+    <link rel="stylesheet" href="./css/header-top-animation.css">
+    <link rel="stylesheet" href="./css/tab.css">
+    <link rel="stylesheet" href="./css/button-top.css">
+    <link rel="stylesheet" href="./css/footer.css">
+</head>
+<body>
+
+<header class="fixed-header">
+  <div class="header-top-bar">
+    <div class="header-left">
+      <button class="menu-trigger" id="menu-trigger" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+
+    <div class="header-center" onclick="location.href='index.html'">
+      <div class="logo-wrapper">
+        <img src="./img/MIAZUMATCH_icon.jpg" alt="MIZUMATCH ロゴ" class="header-logo">
+      </div>
+      <span class="header-circle-name">MIZUMATCH</span>
+    </div>
+
+    <div class="header-right"></div>
+  </div>
+
+  <div class="menu-overlay" id="menu-overlay" onclick="toggleMenu()"></div>
+
+  <nav class="side-menu" id="side-menu">
+    <div class="side-menu-header">
+      <div class="side-menu-header-inner">
+        <span class="side-menu-title">サイト項目一覧</span>
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+      </div>
+    </div>
+
+    <ul class="side-menu-list side-menu-pc">
+      <li>
+        <a href="#pc-tab1" class="menu-main-link">ホーム</a>
+        <ul class="sub-list">
+          <li><a href="#">お知らせ</a></li>
+          <li><a href="#">ニュース</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#pc-tab2" class="menu-main-link">サークル</a>
+        <ul class="sub-list">
+          <li><a href="#">紹介</a></li>
+          <li><a href="#">代表挨拶</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#pc-tab3" class="menu-main-link">現在イベント</a>
+        <ul class="sub-list">
+          <li><a href="#">開催中</a></li>
+          <li><a href="#">参加申込</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#pc-tab4" class="menu-main-link">過去イベント</a>
+        <ul class="sub-list">
+          <li><a href="#">2024年度</a></li>
+          <li><a href="#">ギャラリー</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#results" class="menu-main-link">活動実績</a>
+        <ul class="sub-list">
+          <li><a href="#">実績一覧</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#sponsor" class="menu-main-link">協賛</a>
+        <ul class="sub-list">
+          <li><a href="#">企業一覧</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#sns" class="menu-main-link">SNS</a>
+        <ul class="sub-list">
+          <li><a href="#">𝕏 / Instagram</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#faq" class="menu-main-link">FAQ</a>
+        <ul class="sub-list">
+          <li><a href="#">よくある質問</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="side-menu-list side-menu-tablet">
+      <li>
+        <a href="#home" class="menu-main-link">ホーム</a>
+        <ul class="sub-list">
+          <li><a href="#">ニュース</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#circle" class="menu-main-link">サークル</a>
+        <ul class="sub-list">
+          <li><a href="#">紹介</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#event" class="menu-main-link">イベント</a>
+        <ul class="sub-list">
+          <li><a href="#">開催予定</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#results" class="menu-main-link">活動実績</a>
+        <ul class="sub-list">
+          <li><a href="#">実績一覧</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#sponsor" class="menu-main-link">協賛</a>
+        <ul class="sub-list">
+          <li><a href="#">企業一覧</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#sns" class="menu-main-link">SNS</a>
+        <ul class="sub-list">
+          <li><a href="#">𝕏 / Instagram</a></li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="side-menu-list side-menu-sp">
+      <li>
+        <a href="#sp-tab1" class="accordion-trigger">ホーム</a>
+        <div class="sub-menu"><div class="sub-menu-inner">
+          <a href="#sp-tab1">お知らせ</a><br>
+          <a href="#sp-tab1">ニュース</a></div></div>
+      </li>
+      <li>
+        <a href="#sp-tab2" class="accordion-trigger">サークル</a>
+        <div class="sub-menu">
+          <div class="sub-menu-inner">
+            <a href="#sp-tab2">紹介</a><br>
+            <a href="#sp-tab2">代表挨拶</a></div></div>
+      </li>
+      <li>
+        <a href="#sp-tab3" class="accordion-trigger">イベント</a>
+        <div class="sub-menu"><div class="sub-menu-inner"><a href="#">開催予定</a><br><a href="#">過去の記録</a></div></div>
+      </li>
+      <li>
+        <a href="#" class="accordion-trigger">協賛</a>
+        <div class="sub-menu"><div class="sub-menu-inner"><a href="#">企業一覧</a><br><a href="#">協賛について</a></div></div>
+      </li>
+      <li>
+        <a href="#" class="accordion-trigger">SNS</a>
+        <div class="sub-menu"><div class="sub-menu-inner"><a href="#">𝕏 (Twitter)</a><br><a href="#">Instagram</a></div></div>
+      </li>
+    </ul>
+  </nav>
+
+    <div class="tab-group pc-tabs">
+    <button class="tab-link active" onclick="openTab(event, 'pc-tab1')">ホーム</button>
+    <button class="tab-link" onclick="openTab(event, 'pc-tab2')">サークル</button>
+    <button class="tab-link" onclick="openTab(event, 'pc-tab3')">現在イベント</button>
+    <button class="tab-link" onclick="openTab(event, 'pc-tab4')">過去イベント</button>
+    <button class="tab-link" onclick="openTab(event, 'pc-tab5')">活動実績</button>
+    <button class="tab-link" onclick="openTab(event, 'pc-tab6')">協賛</button>
+    <button class="tab-link" onclick="openTab(event, 'pc-tab7')">SNS</button>
+    <button class="tab-link" onclick="openTab(event, 'pc-tab8')">FAQ</button>
+  </div>
+
+  <div class="tab-group tablet-tabs">
+    <button class="tab-link active" onclick="openTab(event, 'tablet-tab1')">ホーム</button>
+    <button class="tab-link" onclick="openTab(event, 'tablet-tab2')">サークル</button>
+    <button class="tab-link" onclick="openTab(event, 'tablet-tab3')">イベント</button>
+    <button class="tab-link" onclick="openTab(event, 'tablet-tab4')">活動実績</button>
+    <button class="tab-link" onclick="openTab(event, 'tablet-tab5')">協賛</button>
+    <button class="tab-link" onclick="openTab(event, 'tablet-tab6')">SNS</button>
+  </div>
+
+  <div class="tab-group sp-tabs">
+    <button class="tab-link active" onclick="openTab(event, 'sp-tab1')">ホーム</button>
+    <button class="tab-link" onclick="openTab(event, 'sp-tab2')">紹介</button>
+    <button class="tab-link" onclick="openTab(event, 'sp-tab3')">イベント</button>
+    <button class="tab-link" onclick="openTab(event, 'sp-tab4')">協賛</button>
+    <button class="tab-link" onclick="openTab(event, 'sp-tab5')">SNS</button>
+  </div>
+
+</header>
+<main class="content-wrapper">
+  <div class="pc-content-group">
+    <div id="pc-tab1" class="tab-content"><h2>PC版ホーム</h2></div>
+    <div id="pc-tab2" class="tab-content"><h2>PC版サークル</h2></div>
+    <div id="pc-tab3" class="tab-content"><h2>PC版現在イベント</h2></div>
+    <div id="pc-tab4" class="tab-content"><h2>PC版過去イベント</h2></div>
+    <div id="pc-tab5" class="tab-content"><h2>PC版活動実績</h2></div>
+    <div id="pc-tab6" class="tab-content"><h2>PC版協賛</h2></div>
+    <div id="pc-tab7" class="tab-content"><h2>PC版SNS</h2></div>
+    <div id="pc-tab8" class="tab-content"><h2>PC版FAQ</h2></div>
+  </div>
+
+  <div class="tablet-content-group">
+    <div id="tablet-tab1" class="tab-content"><h2>タブレット版ホーム</h2></div>
+    <div id="tablet-tab2" class="tab-content"><h2>タブレット版サークル</h2></div>
+    <div id="tablet-tab3" class="tab-content"><h2>タブレット版イベント</h2></div>
+    <div id="tablet-tab4" class="tab-content"><h2>タブレット版実績</h2></div>
+    <div id="tablet-tab5" class="tab-content"><h2>タブレット版協賛</h2></div>
+    <div id="tablet-tab6" class="tab-content"><h2>タブレット版SNS</h2></div>
+  </div>
+
+  <div class="sp-content-group">
+    <div id="sp-tab1" class="tab-content"><h2>スマホ版ホーム</h2></div>
+    <div id="sp-tab2" class="tab-content"><h2>スマホ版紹介</h2></div>
+    <div id="sp-tab3" class="tab-content"><h2>スマホ版イベント</h2></div>
+    <div id="sp-tab4" class="tab-content"><h2>スマホ版協賛</h2></div>
+    <div id="sp-tab5" class="tab-content"><h2>スマホ版SNS</h2></div>
+  </div>
+</main>
+
+<div class="back-to-top-container">
+  <button class="apple-back-to-top-central" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="ページ最上部へ移動">
+    <span>↑</span> トップへ戻る
+  </button>
+</div>
+
+<footer class="apple-footer">
+  <div class="footer-content">
+    
+    <div class="footer-brand">
+      <div class="brand-logo">
+        <img src="./img/MIAZUMATCH_icon.jpg" alt="MIZUMATCH Icon" class="logo-img">
+      </div>
+      <span class="brand-name">MIZUMATCH</span>
+    </div>
+
+    <nav class="footer-directory">
+      <div class="directory-column">
+        <input type="checkbox" id="col-1" class="toggle-check">
+        <label for="col-1" class="column-title">活動紹介</label>
+        <ul class="column-list">
+          <li><a href="#">日々の活動内容</a></li>
+          <li><a href="#">年間イベント表</a></li>
+          <li><a href="#">活動実績・受賞歴</a></li>
+          <li><a href="#">フォトギャラリー</a></li>
+        </ul>
+      </div>
+
+      <div class="directory-column">
+        <input type="checkbox" id="col-2" class="toggle-check">
+        <label for="col-2" class="column-title">入部案内</label>
+        <ul class="column-list">
+          <li><a href="#">新歓特設ページ</a></li>
+          <li><a href="#">募集要項 (2026年度)</a></li>
+          <li><a href="#">よくある質問 (FAQ)</a></li>
+          <li><a href="#">体験入部の申込み</a></li>
+        </ul>
+      </div>
+
+      <div class="directory-column">
+        <input type="checkbox" id="col-3" class="toggle-check">
+        <label for="col-3" class="column-title">メンバー・OBOG</label>
+        <ul class="column-list">
+          <li><a href="#">部員紹介</a></li>
+          <li><a href="#">OB/OGの方へ</a></li>
+          <li><a href="#">部内専用ページ</a></li>
+          <li><a href="#">サークル規約 (PDF)</a></li>
+        </ul>
+      </div>
+
+      <div class="directory-column">
+        <input type="checkbox" id="col-4" class="toggle-check">
+        <label for="col-4" class="column-title">メディア</label>
+        <ul class="column-list">
+          <li><a href="#" class="link-twitter">𝕏 (Twitter)</a></li>
+          <li><a href="#" class="link-instagram">Instagram</a></li>
+          <li><a href="#" class="link-youtube">YouTube公式</a></li>
+          <li><a href="#">公式ブログ</a></li>
+        </ul>
+      </div>
+
+      <div class="directory-column">
+        <input type="checkbox" id="col-5" class="toggle-check">
+        <label for="col-5" class="column-title">お問い合わせ</label>
+        <ul class="column-list">
+          <li><a href="#">入部希望フォーム</a></li>
+          <li><a href="#">取材・依頼のご連絡</a></li>
+          <li><a href="#">不具合の報告</a></li>
+          <li><a href="#">個人情報の取り扱い</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="footer-footnotes">
+      <ul>
+        <li>※ 1 掲載されている活動写真は、プライバシー保護のため加工している場合があります。</li>
+        <li>※ 2 合宿や遠征の費用は、年度ごとの参加人数により変動します。最新の情報を確認してください。</li>
+        <li>※ 3 外部団体からのコラボレーション依頼については「お問い合わせ」よりご連絡ください。</li>
+      </ul>
+    </section>
+
+    <section class="footer-bottom">
+      <div class="footer-legal">
+        <div class="legal-left">
+          <p class="copyright">Copyright © 2026 MIZUMATCH. All rights reserved.</p>
+        </div>
+        <div class="legal-links">
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">サイトマップ</a>
+          <a href="#" class="country">日本</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</footer>
+
+<script src="./js/header-top.js"></script>
+<script src="./js/tab.js"></script>
+<script src="./js/footer.js"></script>
+</body>
+</html>
