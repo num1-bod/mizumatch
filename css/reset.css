@@ -3,11 +3,6 @@
 /* サイト全体に適用する場合 */
 body {
   font-family: "Noto Sans JP", sans-serif;
-  /* 文字の太さを指定（400が通常、700が太字） */
-  font-weight: 400;
-}
-
-/* 見出しだけ太くしたい場合 */
-h1, h2, h3 {
-  font-weight: 700;
+  /* 背景色の設定 */
+  background-color: #E5ECF2;
 }
