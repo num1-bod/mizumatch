@@ -1,0 +1,48 @@
+/* --- ページトップへ戻るボタン（中央配置版） --- */
+.back-to-top {
+  position: fixed;
+  bottom: 25px; /* 下からの距離 */
+  left: 50%;    /* 画面の左から50%の位置へ */
+  transform: translateX(-50%); /* 自分の幅の半分だけ左に戻して、完全に中央にする */
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  
+  /* 表示・非表示の切り替え設定 */
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ホバー時の演出（中央の状態を維持しつつ浮かせる） */
+.back-to-top:hover {
+  background-color: #0056b3;
+  transform: translateX(-50%) translateY(-5px); /* X軸の中央寄せを維持したまま上へ */
+}
+
+/* 表示状態（JSで制御） */
+.back-to-top.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* スマホ用のサイズ調整 */
+@media screen and (max-width: 480px) {
+  .back-to-top {
+    bottom: 20px;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+}

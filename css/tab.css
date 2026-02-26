@@ -1,0 +1,77 @@
+:root {
+  --tab-main-color: #1F5199;      
+  --tab-bg-color: #ffffff;        
+  --tab-text-color: #555555;      
+  --tab-inactive-line-color: #e0e0e0; 
+  --tab-h: 60px;                  
+  --tab-line-weight: 3px;         
+  --tab-font-size: 15px;          
+  --tab-transition: 0.3s;
+  --max-width: 1500px;
+}
+
+/* 基本設定：JS実行前は全て隠す */
+.tab-group, .tab-content, .pc-content-group, .tablet-content-group, .sp-content-group {
+  display: none;
+}
+
+.fixed-header {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 9999;
+  background-color: var(--tab-bg-color);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tab-group {
+  width: 100%; max-width: var(--max-width);
+  margin: 0 auto; padding: 0; list-style: none;
+  justify-content: space-between;
+}
+
+.tab-link {
+  flex: 1; height: var(--tab-h);
+  background: transparent; border: none; cursor: pointer;
+  position: relative; display: flex; align-items: center; justify-content: center;
+  font-size: var(--tab-font-size); color: var(--tab-text-color);
+  transition: all var(--tab-transition);
+}
+
+/* 下線の隙間デザイン */
+.tab-link::after {
+  content: ""; position: absolute; bottom: 0; left: 8%; width: 84%;
+  border-bottom: var(--tab-line-weight) solid var(--tab-inactive-line-color);
+}
+
+.tab-link.active { color: var(--tab-main-color); font-weight: bold; }
+.tab-link.active::after { border-bottom-color: var(--tab-main-color); }
+
+/* --- 条件分岐：PC (1201px〜) --- */
+@media screen and (min-width: 1201px) {
+  .pc-tabs { display: flex !important; }
+  .pc-content-group { display: block !important; }
+  /* 他を強制非表示 */
+  .tablet-tabs, .sp-tabs, .tablet-content-group, .sp-content-group { display: none !important; }
+}
+
+/* --- 条件分岐：タブレット (601px〜1200px) --- */
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  .tablet-tabs { display: flex !important; }
+  .tablet-content-group { display: block !important; }
+  /* 他を強制非表示 */
+  .pc-tabs, .sp-tabs, .pc-content-group, .sp-content-group { display: none !important; }
+}
+
+/* --- 条件分岐：スマホ (〜600px) --- */
+@media screen and (max-width: 600px) {
+  :root { --tab-h: 50px; --tab-font-size: 13px; }
+  .sp-tabs { display: flex !important; }
+  .sp-content-group { display: block !important; }
+  .tab-link::after { left: 5%; width: 90%; }
+  /* 他を強制非表示 */
+  .pc-tabs, .tablet-tabs, .pc-content-group, .tablet-content-group { display: none !important; }
+}
+
+.content-wrapper {
+  padding-top: 100px;
+  max-width: var(--max-width); margin: 0 auto;
+  padding-left: 15px; padding-right: 15px;
+}
