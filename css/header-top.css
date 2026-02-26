@@ -4,7 +4,7 @@
    ============================================= */
 :root {
   /* --- メインカラー・背景 --- */
-  --header-top-bg-color: #ffffff;      /* ヘッダーの背景色 */
+  --header-top-bg-color: #E5ECF2;      /* ヘッダーの背景色 */
   --header-top-border-color: #eaeaea;  /* ヘッダー下の線の色 */
   --header-top-accent-color: #1F5199;  /* ホバー時やボタンのアクセント色 */
   --header-top-overlay-color: rgba(0, 0, 0, 0.5); /* メニュー展開時の背景の暗さ */
@@ -215,4 +215,5 @@
 .side-menu-list li a:hover {
   background-color: #f8f9fa;
   color: var(--header-top-accent-color);
+
 }
