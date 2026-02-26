@@ -1,0 +1,40 @@
+/* --- トップへ戻るボタンエリア専用 --- */
+.back-to-top-container {
+  /* ボタン専用の変数設定 */
+  --btt-bg-area: #E5ECF2;      /* エリア全体の背景 */
+  --btt-btn-bg: #FFF;       /* ボタン自体の背景 */
+  --btt-text: #1F5199;         /* 文字色 */
+  --btt-border: #1F5199;       /* 枠線 */
+  --btt-hover-bg: #1F5199;     /* ホバー時の背景 */
+  --btt-hover-text: #ffffff;   /* ホバー時の文字 */
+  
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0 30px 0;
+  background-color: var(--btt-bg-area);
+  position: relative;
+  z-index: 10;
+}
+
+.apple-back-to-top-central {
+  background-color: var(--btt-btn-bg);
+  border: 1px solid var(--btt-border);
+  color: var(--btt-text);
+  padding: 10px 24px;
+  border-radius: 24px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.apple-back-to-top-central:hover {
+  background-color: var(--btt-hover-bg);
+  color: var(--btt-hover-text);
+  border-color: var(--btt-hover-bg);
+}
