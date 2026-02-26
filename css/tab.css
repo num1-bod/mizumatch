@@ -2,7 +2,7 @@
   --tab-main-color: #1F5199;      
   --tab-bg-color: #E5ECF2;        
   --tab-text-color: #555555;      
-  --tab-inactive-line-color: #e0e0e0; 
+  --tab-inactive-line-color: #CCC; 
   --tab-h: 60px;                  
   --tab-line-weight: 3px;         
   --tab-font-size: 15px;          
@@ -37,7 +37,7 @@
 
 /* 下線の隙間デザイン */
 .tab-link::after {
-  content: ""; position: absolute; bottom: 0; left: 8%; width: 84%;
+  content: ""; position: absolute; bottom: 0; left: 10%; width: 80%;
   border-bottom: var(--tab-line-weight) solid var(--tab-inactive-line-color);
 }
 
@@ -75,4 +75,5 @@
   max-width: var(--max-width); margin: 0 auto;
   padding-left: 15px; padding-right: 15px;
 }
+
 
