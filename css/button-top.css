@@ -1,0 +1,59 @@
+/* 外枠のコンテナ */
+.back-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 9999;
+  
+  /* 重要：最初は完全に隠す */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px); /* 少し下から浮き上がるアニメーション用 */
+  transition: all 0.4s ease;
+
+  /* コンテナ自体はスルーさせる */
+  pointer-events: none; 
+}
+
+/* スクロール時にJSで付与するクラス */
+.back-to-top-container.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ボタン本体 */
+.apple-back-to-top-central {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  color: #1d1d1f;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  
+  /* ボタン本体だけは反応させる */
+  pointer-events: auto; 
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.apple-back-to-top-central .arrow {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.apple-back-to-top-central:active {
+  background-color: rgba(230, 230, 230, 0.9);
+  transform: scale(0.95);
+}
