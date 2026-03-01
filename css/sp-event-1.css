@@ -1,0 +1,90 @@
+:root {
+  /* カラー設定 */
+  --se1-main-blue: #1F5199;
+  --se1-text-black: #111111;
+  --se1-text-gray: #555555;
+  --se1-sub-red: #d93025;         /* 注意書き用 */
+  --se1-line-color: #CCCCCC;      /* 区切り線 */
+  
+  /* 余白・サイズ */
+  --se1-padding-bottom: 0px;
+  --se1-side-padding: 24px;
+  --se1-img-radius: 12px;
+  --se1-img-side-gap: 15px;
+}
+
+.sp-event-1 {
+  width: 100%;
+  padding-bottom: var(--se1-padding-bottom);
+  background-color: transparent;
+}
+
+/* 画像エリア */
+.sp-event-1 .se1-visual-box {
+  width: 100%;
+  padding: 0 var(--se1-img-side-gap);
+  box-sizing: border-box;
+}
+
+.sp-event-1 .se1-visual-box img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: var(--se1-img-radius);
+  display: block;
+}
+
+/* コンテンツエリア */
+.sp-event-1 .se1-article-body {
+  padding: 25px var(--se1-side-padding);
+}
+
+/* タイトル & キャッチコピーのスタイルを削除しました */
+
+/* 情報リスト */
+.sp-event-1 .se1-info-group {
+  margin-bottom: 35px;
+  border-top: 1px solid var(--se1-line-color);
+}
+
+.sp-event-1 .se1-info-item {
+  display: flex;
+  align-items: flex-start;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--se1-line-color);
+}
+
+.sp-event-1 .se1-tag {
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: var(--se1-text-gray);
+  width: 80px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.sp-event-1 .se1-val-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sp-event-1 .se1-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--se1-text-black);
+  line-height: 1.4;
+}
+
+/* 補足・注意点（赤文字） */
+.sp-event-1 .se1-sub-val {
+  font-size: 0.8rem;
+  color: var(--se1-sub-red);
+  font-weight: 600;
+}
+
+/* ボタン中央揃え */
+.sp-event-1 .se1-button-area {
+  display: flex;
+  justify-content: center;
+}
